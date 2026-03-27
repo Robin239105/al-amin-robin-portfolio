@@ -16,6 +16,8 @@
       :root {
         --bg-primary: #0F5E52;
         --accent-primary: #fac42f;
+        --nav-height: 110px;
+        --font-primary: 'Poppins', sans-serif;
       }
       body {
         margin: 0;
@@ -26,6 +28,40 @@
         -webkit-font-smoothing: antialiased;
       }
       #root { min-height: 100vh; }
+      .noise-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .hero-bg-container {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        overflow: hidden;
+        z-index: 0;
+        background: #0F5E52;
+      }
+      .mesh-gradient {
+        position: absolute;
+        width: 100vw; height: 100vw;
+        filter: blur(80px);
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 1;
+        will-change: transform;
+      }
+      .mesh-1 { top: -20%; left: -20%; background: radial-gradient(circle, rgba(250, 196, 47, 0.25) 0%, transparent 70%); }
+      .mesh-2 { bottom: -20%; right: -20%; background: radial-gradient(circle, rgba(19, 119, 104, 0.5) 0%, transparent 60%); }
+      .mesh-3 { top: 50%; left: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(250, 196, 47, 0.05) 0%, transparent 80%); }
+      .hero-grid-lines {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        opacity: 0.2;
+      }
     </style>
     <meta name="description" content="Al Amin Robin is a seasoned Full Stack Website Developer with 6+ years of experience and 1,300+ projects delivered. Expert in WordPress, React, E-Commerce, and premium web design." />
     <meta name="keywords" content="Al Amin Robin, Web Developer, WordPress Expert, React Developer, Full Stack Developer, Freelance Web Developer, Bangladesh" />
