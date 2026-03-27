@@ -1,0 +1,5 @@
+# Exclude build analytics from language statistics
+bundle-stats.html linguist-detectable=false
+
+# Exclude compressed assets
+**/*.gz linguist-detectable=false
