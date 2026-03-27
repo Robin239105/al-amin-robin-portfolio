@@ -143,9 +143,9 @@ export default function Navigation() {
           </div>
 
           <div className="nav-social-links">
-            <a href="mailto:wpdeveloper.robin@gmail.com" className="nav-social-link"><MailIcon /></a>
-            <a href="https://www.facebook.com/wpdeveloper.robin" target="_blank" rel="noopener noreferrer" className="nav-social-link"><FacebookIcon /></a>
-            <a href="https://github.com/Robin239105" target="_blank" rel="noopener noreferrer" className="nav-social-link"><GithubIcon /></a>
+            <a href="mailto:wpdeveloper.robin@gmail.com" className="nav-social-link" aria-label="Email Me"><MailIcon /></a>
+            <a href="https://www.facebook.com/wpdeveloper.robin" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="Facebook Profile"><FacebookIcon /></a>
+            <a href="https://github.com/Robin239105" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="GitHub Profile"><GithubIcon /></a>
           </div>
         </div>
       </motion.nav>

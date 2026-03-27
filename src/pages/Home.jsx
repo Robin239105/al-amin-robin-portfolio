@@ -200,7 +200,7 @@ const TestimonialSlider = () => {
                   {testimonials[current].name.charAt(0).toUpperCase()}
                 </div>
                 <div className="brand-info">
-                  <h4 className="client-name-v2">{testimonials[current].name}</h4>
+                  <h3 className="client-name-v2">{testimonials[current].name}</h3>
                   <div className="client-meta-v2">
                     <img src={`https://flagcdn.com/16x12/${testimonials[current].countryCode}.png`} alt="" className="flag-mini" />
                     <span>{testimonials[current].country}</span>
@@ -232,6 +232,8 @@ const TestimonialSlider = () => {
               key={i} 
               onClick={() => setCurrent(i)} 
               className={`dot ${i === current ? 'active' : ''}`}
+              aria-label={`Go to testimonial ${i + 1}`}
+              aria-current={i === current ? 'true' : 'false'}
             ></button>
           ))}
         </div>
