@@ -43,7 +43,7 @@ const expertise = [
   {
     num: '02',
     title: 'Premium Web Design',
-    desc: 'Ultra-luxurious portfolios and corporate websites. We blend Kinetic Architect principles with high-end digital aesthetics.',
+    desc: 'Ultra-luxurious portfolios and corporate websites. We blend Al Amin Robin Portfolio principles with high-end digital aesthetics.',
   },
   {
     num: '03',

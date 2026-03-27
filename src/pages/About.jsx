@@ -1,6 +1,6 @@
 import { ScrollReveal, AnimatedText, FadeIn, CountUp } from '../components/ui/Animations';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Palette, Zap, ShoppingCart, Rocket } from 'lucide-react';
 import './About.css';
 
 const education = [
@@ -56,25 +56,25 @@ const services = [
     num: '01',
     title: 'Web Design',
     desc: 'Design your website with Figma, Adobe XD, or Photoshop — whichever you prefer. Expert at all the software to design premium, modern web pages.',
-    icon: '🎨',
+    icon: <Palette size={24} />,
   },
   {
     num: '02',
     title: 'Web Development',
     desc: 'Develop your website with WordPress, React, or custom HTML/CSS/JS. Expert at building fast, responsive, and SEO-optimized websites.',
-    icon: '⚡',
+    icon: <Zap size={24} />,
   },
   {
     num: '03',
     title: 'E-Commerce',
     desc: 'Build powerful online stores with Shopify and WooCommerce. From product setup to payment gateways — a full turnkey solution.',
-    icon: '🛒',
+    icon: <ShoppingCart size={24} />,
   },
   {
     num: '04',
     title: 'SEO & Speed',
     desc: 'Optimize your website for search engines and blazing-fast performance. Core Web Vitals, meta tags, schema markup — the full package.',
-    icon: '🚀',
+    icon: <Rocket size={24} />,
   },
 ];
 
@@ -232,7 +232,7 @@ export default function About() {
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <div className="about-service-card glass-panel premium-glow">
                   <div className="service-card-header">
-                    <span className="service-icon">{service.icon}</span>
+                    <span className="service-icon gold-text">{service.icon}</span>
                     <span className="service-num gold-text">{service.num}.</span>
                   </div>
                   <h3 className="service-card-title">{service.title}</h3>
