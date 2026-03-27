@@ -85,3 +85,4 @@ db.transaction(() => {
 console.log('Database seeded with projects, skills, and services!');
 process.exit(0);
 
+
