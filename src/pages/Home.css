@@ -617,6 +617,7 @@
   position: relative;
   width: 100%;
   max-width: 650px;
+  aspect-ratio: 16 / 10;
   margin: 0 auto;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;

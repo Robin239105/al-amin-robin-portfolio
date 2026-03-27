@@ -364,6 +364,9 @@ export default function Home() {
                     alt="Al Amin Robin" 
                     className="hero-portrait" 
                     fetchPriority="high"
+                    loading="eager"
+                    width="800"
+                    height="1000"
                   />
                 </div>
               </motion.div>
@@ -419,7 +422,7 @@ export default function Home() {
                     <div className="macbook-screen">
                       <div className="macbook-camera"></div>
                       <div className="macbook-display">
-                        <img src={project.imageUrl} alt={project.title} className="macbook-content" loading="lazy" />
+                        <img src={project.imageUrl} alt={project.title} className="macbook-content" loading="lazy" width="800" height="1200" />
                         <div className="macbook-screen-blur-overlay"></div>
                       </div>
                     </div>
