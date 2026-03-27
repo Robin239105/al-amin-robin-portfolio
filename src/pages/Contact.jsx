@@ -17,7 +17,7 @@ export default function Contact() {
   const [status, setStatus] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!recaptchaToken) {
@@ -27,14 +27,26 @@ export default function Contact() {
 
     setStatus('sending');
 
-    // Categorical Pure-Frontend Simulation (No External SDKs)
-    console.log('Form Submission:', formState);
-    
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formState, captcha: recaptchaToken }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setStatus('success');
       setFormState({ name: '', email: '', whatsapp: '', message: '', budget: '' });
       setRecaptchaToken(null);
-    }, 1500);
+    } catch (error) {
+      console.error('Submission Error:', error);
+      setStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -204,6 +216,9 @@ export default function Contact() {
 
                   {status === 'success' && (
                     <div className="form-toast success-toast">✅ Message sent! I'll get back to you within 24 hours.</div>
+                  )}
+                  {status === 'error' && (
+                    <div className="form-toast error-toast">❌ Something went wrong. Please try again or WhatsApp me.</div>
                   )}
                   {status === 'captcha' && (
                     <div className="form-toast error-toast">⚠️ Please complete the reCAPTCHA to verify you're human.</div>
