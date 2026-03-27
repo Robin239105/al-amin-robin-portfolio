@@ -321,7 +321,6 @@ export default function Home() {
         
         {/* Floating Decorative Coords */}
         <div className="hero-architectural-coords" style={{ top: '15%', left: '5%' }}>import React from 'react';</div>
-        <div className="hero-architectural-coords" style={{ bottom: '15%', right: '5%' }}>def masterpiece(): return True</div>
 
         <div className="container hero-container">
           <div className="hero-col hero-left">
