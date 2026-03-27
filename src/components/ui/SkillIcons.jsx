@@ -51,3 +51,4 @@ export const DiviLogo = () => (
     <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="white" style={{ fontSize: '32px', fontWeight: 'bold', fontFamily: 'Arial' }}>D</text>
   </svg>
 );
+

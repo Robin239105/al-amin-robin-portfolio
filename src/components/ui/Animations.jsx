@@ -173,3 +173,4 @@ export function CharReveal({ text, className = "", delay = 0, stagger = 0.03 }) 
     </motion.span>
   );
 }
+

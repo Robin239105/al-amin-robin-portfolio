@@ -33,3 +33,4 @@ export default function MagneticButton({ children, onClick, className = '' }) {
     </motion.button>
   );
 }
+
