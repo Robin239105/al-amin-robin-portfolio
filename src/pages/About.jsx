@@ -34,7 +34,7 @@ const experience = [
   {
     year: '2023-Present',
     title: 'NETBIZ ENTERPRISES',
-    company: 'BANGLADESH',
+    company: 'AUSTRALIA',
     desc: 'A company sell website development and server services along with some e-commerce products. I am doing server engineering and website development here.'
   }
 ];
