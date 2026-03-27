@@ -169,9 +169,10 @@
 .hero-architectural-coords {
   position: absolute;
   font-family: monospace;
-  font-size: 0.7rem;
-  color: var(--accent-primary);
-  opacity: 0.8;
+  font-size: 0.75rem;
+  color: #ffffff;
+  font-weight: 600;
+  opacity: 0.9;
   letter-spacing: 0.2em;
   pointer-events: none;
 }
