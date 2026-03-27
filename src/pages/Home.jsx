@@ -410,7 +410,7 @@ export default function Home() {
 
           <div className="imac-projects-grid">
             {[
-              { id: 1, title: 'Visit LGF', imageUrl: '/media/screencapture-arawsupermarket-gr-2025-12-09-16_58_26-scaled-e1765279408154.webp', liveUrl: 'https://arawsupermarket.gr' },
+              { id: 1, title: 'Visit LGF', imageUrl: '/media/screencapture-visitlfg-2025-09-27-07_27_20-2-scaled.webp', liveUrl: 'https://visitlfg.com/' },
               { id: 2, title: 'Baxter & Frost', imageUrl: '/media/screencapture-baxterandfrost-2025-09-28-01_16_43-scaled.webp', liveUrl: 'https://baxterandfrost.com/' }
             ].map((project, index) => (
               <ScrollReveal key={project.id} delay={index * 0.2}>
