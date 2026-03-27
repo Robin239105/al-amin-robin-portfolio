@@ -1,0 +1,187 @@
+/* 
+   Structural Portfolio Restoration (v3.0)
+   Locked to stop 107k px explosion.
+*/
+
+.portfolio-page {
+  position: relative;
+  background-color: #0F5E52; /* Deep Premium Green */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Ambient Orbs - Subtle Glows */
+.portfolio-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.portfolio-orb-1 {
+  top: 10%;
+  right: -5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+}
+
+.portfolio-orb-2 {
+  bottom: 20%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #137768 0%, transparent 70%);
+}
+
+.portfolio-hero-section {
+  position: relative;
+  z-index: 3;
+  padding: 10rem 0 4rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-hero-section {
+    padding: 1.5rem 0;
+  }
+  .portfolio-grid {
+    padding-top: 1rem;
+    padding-bottom: 3.5rem; /* Clears bottom tab bar */
+  }
+}
+
+.portfolio-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-hero-sub {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* 2-Column Grid Wrapper */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 0; /* Removed bottom padding here */
+  position: relative;
+  z-index: 2;
+}
+
+/* Card & Mockup Container */
+.portfolio-mockup-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-mockup-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* MacBook Mockup Shell */
+.macbook-mockup {
+  position: relative;
+  width: 100%;
+  perspective: 1000px;
+}
+
+/* SCREEN CONTAINER - THE 107K STOPPER */
+.macbook-screen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #1e293b;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden !important; /* CRITICAL */
+  border: 4px solid #334155;
+  box-shadow: none !important;
+}
+
+/* MOCKUP CONTENT - ABSOLUTE CLIPPING */
+.macbook-display {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.macbook-content {
+  width: 100% !important;
+  height: auto !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  transition: transform 10s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.portfolio-mockup-card:hover .macbook-content {
+  transform: translateY(calc(-100% + 30vw)); /* Scaled scrolling */
+}
+
+/* MacBook Base */
+.macbook-base {
+  width: 110%;
+  height: 1.5rem;
+  background: linear-gradient(180deg, #94a3b8 0%, #475569 100%);
+  margin-top: -2px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: none !important;
+  position: relative;
+  margin-left: -5%;
+}
+
+/* Project Titles - Bold Uppercase White */
+.portfolio-mockup-title {
+  margin-top: 2.5rem;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-shadow: none !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    gap: 4rem 2rem;
+  }
+  .portfolio-mockup-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero-section {
+    padding: 2rem 0 1rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 5rem;
+  }
+  .portfolio-mockup-title {
+    font-size: 1.3rem;
+  }
+  .portfolio-mockup-card:hover .macbook-content {
+    transform: translateY(calc(-100% + 50vw));
+  }
+}

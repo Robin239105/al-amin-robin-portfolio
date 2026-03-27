@@ -1,0 +1,108 @@
+.footer-minimal {
+  position: relative;
+  z-index: 10;
+  background: var(--bg-primary) !important; /* Match website background */
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  margin-top: 5rem !important; /* Standard separation */
+  border-top: 1px solid rgba(250, 196, 47, 0.4); /* Premium gold divider */
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-brand-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+  filter: none;
+}
+
+.footer-brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-primary);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer-nav a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: var(--accent-primary);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  padding: 0.6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+}
+
+.social-icon:hover {
+  color: var(--accent-primary);
+  background: rgba(250, 196, 47, 0.1);
+  border-color: rgba(250, 196, 47, 0.3);
+  transform: translateY(-4px);
+  box-shadow: none !important;
+}
+
+@media (max-width: 1024px) {
+  .footer-minimal {
+    padding-top: 1rem;
+    padding-bottom: 6rem; /* Minimal clearance for 80px tab bar */
+    margin-top: 1rem !important;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1rem 0;
+  }
+  .footer-nav {
+    display: none;
+  }
+}
