@@ -3,16 +3,15 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { lazy, Suspense } from 'react';
 import { LazyMotion, domMax } from 'framer-motion';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
+import Home from './pages/Home';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -61,7 +60,6 @@ function AppContent() {
       <div className="noise-overlay"></div>
       <Navigation />
       <main className="main-content">
-        <Suspense fallback={<div className="loader-container"></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -71,7 +69,6 @@ function AppContent() {
             {/* Catch-all for deleted admin routes */}
             <Route path="/admin/*" element={<Home />} />
           </Routes>
-        </Suspense>
       </main>
       <Footer />
 
