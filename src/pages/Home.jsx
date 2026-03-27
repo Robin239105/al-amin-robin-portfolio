@@ -320,7 +320,6 @@ export default function Home() {
         <HeroBackground />
         
         {/* Floating Decorative Coords */}
-        <div className="hero-architectural-coords" style={{ top: '15%', left: '5%' }}>import React from 'react';</div>
 
         <div className="container hero-container">
           <div className="hero-col hero-left">
