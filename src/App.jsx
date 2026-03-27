@@ -12,6 +12,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -68,6 +69,8 @@ function AppContent() {
             <Route path="/contact" element={<Contact />} />
             {/* Catch-all for deleted admin routes */}
             <Route path="/admin/*" element={<Home />} />
+            {/* Catch-all for 404 Not Found */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
       </main>
       <Footer />
