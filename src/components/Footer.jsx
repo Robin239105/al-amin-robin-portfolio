@@ -39,6 +39,7 @@ export default function Footer() {
               <Link to="/portfolio">WEBSITE SHOWCASE</Link>
               <Link to="/services">MY TEAM</Link>
               <Link to="/contact">CONTACT WITH ME</Link>
+              <Link to="/sitemap">SITEMAP</Link>
             </nav>
 
             <div className="footer-socials">

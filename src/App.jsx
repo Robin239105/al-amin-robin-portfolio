@@ -12,6 +12,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Sitemap from './pages/Sitemap';
 import NotFound from './pages/NotFound';
 
 // Scrolls to top on every route change
@@ -67,6 +68,7 @@ function AppContent() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             {/* Catch-all for deleted admin routes */}
             <Route path="/admin/*" element={<Home />} />
             {/* Catch-all for 404 Not Found */}
