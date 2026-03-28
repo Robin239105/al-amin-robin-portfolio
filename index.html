@@ -34,6 +34,47 @@
           "target": "https://alaminrobin.com/portfolio?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alaminrobin.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://alaminrobin.com/about" },
+          { "@type": "ListItem", "position": 3, "name": "Services", "item": "https://alaminrobin.com/services" },
+          { "@type": "ListItem", "position": 4, "name": "Portfolio", "item": "https://alaminrobin.com/portfolio" },
+          { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://alaminrobin.com/contact" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does Al Amin Robin provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Al Amin Robin provides premium full stack website development, specializing in custom WordPress solutions, React.js applications, and high-end digital architecture for brands worldwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many projects has Al Amin Robin completed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With over 6 years of experience, Al Amin Robin has successfully delivered more than 1,300 projects and managed portfolios for over 1,000 happy clients."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Al Amin Robin offer custom design and UI/UX services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we providing comprehensive end-to-end digital services including professional UI/UX design (Figma), custom theme development, and technical speed optimization."
+            }
+          }
+        ]
       }
     ]
     </script>
