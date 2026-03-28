@@ -38,6 +38,7 @@ export default function Footer() {
               <Link to="/about">ABOUT</Link>
               <Link to="/portfolio">WEBSITE SHOWCASE</Link>
               <Link to="/services">MY TEAM</Link>
+              <Link to="/faq">FAQ</Link>
               <Link to="/contact">CONTACT WITH ME</Link>
               <Link to="/sitemap">SITEMAP</Link>
             </nav>

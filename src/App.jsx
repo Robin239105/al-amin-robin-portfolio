@@ -13,6 +13,7 @@ import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Sitemap from './pages/Sitemap';
+import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
 
 // Scrolls to top on every route change
@@ -56,6 +57,8 @@ function App() {
   );
 }
 
+import QuickFAQ from './components/QuickFAQ';
+
 function AppContent() {
   return (
     <>
@@ -69,12 +72,15 @@ function AppContent() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/faq" element={<FAQ />} />
+
             {/* Catch-all for deleted admin routes */}
             <Route path="/admin/*" element={<Home />} />
             {/* Catch-all for 404 Not Found */}
             <Route path="*" element={<NotFound />} />
           </Routes>
       </main>
+      <QuickFAQ />
       <Footer />
 
       {/* Floating WhatsApp Button */}

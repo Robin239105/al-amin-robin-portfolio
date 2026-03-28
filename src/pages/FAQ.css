@@ -1,0 +1,67 @@
+.faq-page {
+  padding-top: var(--nav-height);
+  position: relative;
+  min-height: 100vh;
+}
+
+.faq-orb {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(250, 196, 47, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.faq-page-hero {
+  padding: 6rem 0 0;
+}
+
+.faq-eyebrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+.faq-page-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.faq-page-sub {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.faq-page-content {
+  margin-top: -50px; /* Pull it slightly higher up into the hero area */
+}
+
+/* Override sections spacing for the page */
+.faq-page-content .quick-faq-section {
+  margin-top: 0;
+  padding-top: 4rem;
+}
+
+/* Ensure the title is hidden on the dedicated page to avoid duplication 
+   if we want the specific page hero to take charge. 
+   Actually, QuickFAQ's title is good to keep if we use it everywhere.
+*/
+
+.faq-more-section {
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 768px) {
+  .faq-page-hero {
+    padding-top: 4rem;
+  }
+}
