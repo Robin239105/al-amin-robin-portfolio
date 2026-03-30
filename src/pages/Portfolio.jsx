@@ -2,6 +2,7 @@ import { ScrollReveal } from '../components/ui/Animations';
 import './Portfolio.css';
 
 const projects = [
+  { title: 'Cali Modern Design and Construction', imageUrl: '/media/FireShot Capture 002 - Calimoderndesign - calimoderndesign2487.live-website.com.webp', liveUrl: 'https://calimoderndesign2487.live-website.com' },
   { title: 'Pro Power', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://darkturquoise-camel-624860.hostingersite.com/' },
   { title: 'Araw Supermarket', imageUrl: '/media/screencapture-arawsupermarket-gr-2025-12-09-16_58_26-scaled-e1765279408154.webp', liveUrl: 'https://arawsupermarket.gr' },
   { title: 'Baxter & Frost', imageUrl: '/media/screencapture-baxterandfrost-2025-09-28-01_16_43-scaled.webp', liveUrl: 'https://baxterandfrost.com/' },
