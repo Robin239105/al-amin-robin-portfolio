@@ -2,12 +2,13 @@ import { ScrollReveal } from '../components/ui/Animations';
 import './Portfolio.css';
 
 const projects = [
+  { title: 'Pro Power', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://darkturquoise-camel-624860.hostingersite.com/' },
+  { title: 'Ovest KaDeWe', imageUrl: '/media/screencapture-ovest-kadewe-de-2026-01-22-22_17_58-scaled.webp', liveUrl: 'https://ovest-kadewe.de' },
   { title: 'Soiree By M&C', imageUrl: '/media/FireShot Capture 006 - Soiree By M&C – An Event Company - soireebymc.com.webp', liveUrl: 'https://soireebymc.com/' },
   { title: 'Marler Design', imageUrl: '/media/FireShot Capture 005 - Marler Designs - marlerdesigns.com.webp', liveUrl: 'https://marlerdesigns.com/' },
   { title: 'Pellopay', imageUrl: '/media/FireShot Capture 004 - Pellopay- Best Business Funding In UK - pellopay.io.webp', liveUrl: 'https://pellopay.io/' },
   { title: 'Augusta Das Eis', imageUrl: '/media/FireShot Capture 003 - Augusta Daseis - augustadaseis.com.webp', liveUrl: 'https://augustadaseis.com/' },
   { title: 'Cali Modern Design and Construction', imageUrl: '/media/FireShot Capture 002 - Calimoderndesign - calimoderndesign2487.live-website.com.webp', liveUrl: 'https://calimoderndesign2487.live-website.com' },
-  { title: 'Pro Power', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://darkturquoise-camel-624860.hostingersite.com/' },
   { title: 'Araw Supermarket', imageUrl: '/media/screencapture-arawsupermarket-gr-2025-12-09-16_58_26-scaled-e1765279408154.webp', liveUrl: 'https://arawsupermarket.gr' },
   { title: 'Baxter & Frost', imageUrl: '/media/screencapture-baxterandfrost-2025-09-28-01_16_43-scaled.webp', liveUrl: 'https://baxterandfrost.com/' },
   { title: 'Bellocorp', imageUrl: '/media/screencapture-bellocorp-ca-2023-04-08-20_55_42.webp', liveUrl: 'https://bellocorp.ca/' },
@@ -26,7 +27,6 @@ const projects = [
   { title: 'Mrs Garlic', imageUrl: '/media/screencapture-mrsgarlic-2025-09-28-01_04_23-scaled.webp', liveUrl: 'https://mrsgarlic.com/' },
   { title: 'Nao Sushi', imageUrl: '/media/screencapture-naosushi-dk-2024-05-20-19_28_05.webp', liveUrl: 'https://www.naosushi.dk/' },
   { title: 'North Brisbane Neurology', imageUrl: '/media/screencapture-northbrisbaneneurology-au-2024-05-20-18_24_29.webp', liveUrl: 'https://northbrisbaneneurology.com.au/' },
-  { title: 'Ovest KaDeWe', imageUrl: '/media/screencapture-ovest-kadewe-de-2026-01-22-22_17_58-scaled.webp', liveUrl: 'https://ovest-kadewe.de' },
   { title: 'Patae Queso Grill', imageUrl: '/media/screencapture-pataequesogrill-2026-01-25-20_57_18-scaled.webp', liveUrl: 'https://pataequesogrill.com/' },
   { title: 'Philipay UK', imageUrl: '/media/screencapture-philipay-co-uk-2025-09-20-04_17_33-1.webp', liveUrl: 'https://philipay.co.uk' },
   { title: 'Property Finance', imageUrl: '/media/screencapture-propertyfinancechoices-2025-09-28-00_45_30-scaled.webp', liveUrl: 'https://propertyfinancechoices.com/' },
