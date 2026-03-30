@@ -92,26 +92,24 @@ export default function Portfolio() {
 
       {/* Category Filter Bar */}
       <section className="portfolio-filter-section">
-        <div className="container">
-          <div className="filter-bar-wrapper">
-            <div className="filter-bar">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  className={`filter-tab ${activeCategory === cat ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat.toUpperCase()}
-                  {activeCategory === cat && (
-                    <motion.div 
-                      layoutId="active-pill"
-                      className="active-indicator"
-                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
+        <div className="filter-bar-wrapper">
+          <div className="filter-bar">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`filter-tab ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat.toUpperCase()}
+                {activeCategory === cat && (
+                  <motion.div 
+                    layoutId="active-pill"
+                    className="active-indicator"
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+              </button>
+            ))}
           </div>
         </div>
       </section>
