@@ -39,7 +39,7 @@
 .portfolio-hero-section {
   position: relative;
   z-index: 3;
-  padding: 10rem 0 4rem;
+  padding: 5rem 0 2rem; /* Reduced from 10rem and 4rem */
   text-align: center;
 }
 
@@ -72,7 +72,7 @@
 .portfolio-filter-section {
   position: relative;
   z-index: 10;
-  padding: 1rem 0 3rem;
+  padding: 0 0 2rem; /* Reduced from 1rem and 3rem */
 }
 
 .filter-bar-wrapper {
