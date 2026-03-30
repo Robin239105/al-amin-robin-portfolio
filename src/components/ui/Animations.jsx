@@ -3,24 +3,19 @@ import { useRef, useEffect } from 'react';
 
 export function ScrollReveal({ children, width = "100%", delay = 0, style = {} }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10% 0px -10% 0px" });
+  // Using a more lenient margin to ensure elements at the top of the viewport trigger immediately
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden", ...style }}>
+    <div ref={ref} style={{ position: "relative", width, ...style }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75,
-            filter: "blur(0px)", /* Eliminated start-state blur to prevent FOUC "broken" look */
-            scale: 0.95
-          },
-          visible: { opacity: 1, y: 0,
-            filter: "blur(0px)",
-            scale: 1
-          },
+          hidden: { opacity: 0, y: 30, scale: 0.98 },
+          visible: { opacity: 1, y: 0, scale: 1 },
         }}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
       </motion.div>

@@ -1,0 +1,74 @@
+version: "2"
+type: frontend
+tech_stack:
+  - language: JavaScript
+  - framework: React (Vite)
+  - ui_library: Vanilla CSS, Framer Motion, Lenis
+  - other: React Router, Vercel Analytics, Speed Insights, reCAPTCHA, Resend
+routes:
+  - path: /
+    file: src/pages/Home.jsx
+    auth_required: false
+    description: Landing page for the portfolio
+  - path: /about
+    file: src/pages/About.jsx
+    auth_required: false
+    description: Information about Al Amin Robin
+  - path: /portfolio
+    file: src/pages/Portfolio.jsx
+    auth_required: false
+    description: Showcase of completed projects
+  - path: /services
+    file: src/pages/Services.jsx
+    auth_required: false
+    description: List of professional services offered
+  - path: /contact
+    file: src/pages/Contact.jsx
+    auth_required: false
+    description: Contact form and inquiry page
+  - path: /faq
+    file: src/pages/FAQ.jsx
+    auth_required: false
+    description: Frequently Asked Questions with SEO schema
+  - path: /sitemap
+    file: src/pages/Sitemap.jsx
+    auth_required: false
+    description: Visual sitemap of the website
+features:
+  - name: Navigation & Smooth Scroll
+    description: Premium momentum scrolling with Lenis and page transitions with Framer Motion
+    files:
+      - src/App.jsx
+      - src/components/Navigation.jsx
+    entry_route: /
+    user_interactions:
+      - Scroll through pages
+      - Click navigation links
+    auth_required: false
+  - name: Contact Inquiry
+    description: Submit a project inquiry form which sends an email via Resend API
+    files:
+      - src/pages/Contact.jsx
+      - api/contact.js
+    entry_route: /contact
+    user_interactions:
+      - Fill name, email, WhatsApp, budget, and message fields
+      - Complete reCAPTCHA verification
+      - Click "Send Message" button
+    api_calls:
+      - method: POST
+        endpoint: /api/contact
+    auth_required: false
+  - name: FAQ & SEO
+    description: Interactive FAQ section with searchable/expandable questions and JSON-LD schema
+    files:
+      - src/pages/FAQ.jsx
+      - src/components/QuickFAQ.jsx
+    entry_route: /faq
+    user_interactions:
+      - Expand/collapse FAQ items
+    auth_required: false
+known_limitations:
+  - issue: Contact form requires RESEND_API_KEY environment variable for actual delivery
+    location: api/contact.js
+    impact: Form submission will fail if the key is missing or invalid

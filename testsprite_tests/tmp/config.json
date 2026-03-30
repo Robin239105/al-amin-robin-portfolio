@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "executionArgs": {
+    "projectName": "Al Amin Robin Portfolio",
+    "projectPath": "/Users/wpdevrobin/Downloads/Al Amin Robin",
+    "testIds": [],
+    "additionalInstruction": "Test the landing page, navigation links, and the contact form (up to reCAPTCHA). Focus on ensuring the UI is responsive and animations are smooth.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-0CEwpwT4CYzSOPZqdOfALCvdIAVUD_QSOxDY_3PfcOHZgqyqA0CQ-eOWtMGYBbfjJdX2wTBDO0JV4owX8NJnAnhWFUG0WsD6UUa5wvQbobHOv00-87sVykta-clECRAyeAU"
+    }
+  },
+  "serverPort": 54845,
+  "proxy": "http://91d87ecf-ba42-4e18-8c21-041d367afdb2:JW4zj462kFrbvBl1aKnoA6n1VnOli52z@tun.testsprite.com:8080"
+}

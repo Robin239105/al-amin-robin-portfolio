@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
-import { Plus, Minus } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Plus, Minus, Search, X } from 'lucide-react';
 import './QuickFAQ.css';
 
 const faqData = [
@@ -36,13 +36,21 @@ const faqData = [
 
 export default function QuickFAQ({ forceShow = false }) {
   const [activeIdx, setActiveIdx] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggle = (idx) => {
     setActiveIdx(activeIdx === idx ? null : idx);
   };
 
+  const filteredFaq = useMemo(() => {
+    return faqData.filter(item => 
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
+
   return (
-    <section className={`quick-faq-section ${forceShow ? '' : 'desktop-only'}`}>
+    <section className={`quick-faq-section ${forceShow ? 'force-show' : 'desktop-only'}`}>
       <div className="container">
         <div className="quick-faq-title-wrapper">
           <h2 className="quick-faq-title small-title">
@@ -51,40 +59,91 @@ export default function QuickFAQ({ forceShow = false }) {
           <p className="quick-faq-subtitle">Quick answers to common inquiries about my services and process.</p>
         </div>
 
-        <div className="quick-faq-grid glass-panel">
-          {faqData.map((item, idx) => (
-            <div 
-              key={idx} 
-              className={`faq-item ${activeIdx === idx ? 'active' : ''}`}
-            >
+        {/* Search Bar */}
+        <div className="faq-search-wrapper">
+          <div className="faq-search-bar glass-panel">
+            <Search className="search-icon" size={20} />
+            <input 
+              type="text" 
+              className="faq-search-input"
+              placeholder="Search questions or keywords..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search FAQ"
+            />
+            {searchQuery && (
               <button 
-                className="faq-question-btn"
-                onClick={() => toggle(idx)}
-                aria-expanded={activeIdx === idx}
+                className="clear-search-btn" 
+                onClick={() => setSearchQuery('')}
+                aria-label="Clear search"
               >
-                <span className="faq-question-text">{item.question}</span>
-                <span className="faq-icon-wrapper">
-                  {activeIdx === idx ? <Minus size={18} /> : <Plus size={18} />}
-                </span>
+                <X size={18} />
               </button>
-              
-              <AnimatePresence>
-                {activeIdx === idx && (
-                  <m.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="faq-answer-wrapper"
+            )}
+          </div>
+        </div>
+
+        <div className="quick-faq-grid glass-panel">
+          <AnimatePresence mode="wait">
+            {filteredFaq.length > 0 ? (
+              <motion.div 
+                key="results"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {filteredFaq.map((item, idx) => (
+                  <div 
+                    key={idx} 
+                    className={`faq-item ${activeIdx === idx ? 'active' : ''}`}
                   >
-                    <div className="faq-answer-content">
-                      <p>{item.answer}</p>
-                    </div>
-                  </m.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+                    <button 
+                      className="faq-question-btn"
+                      onClick={() => toggle(idx)}
+                      aria-expanded={activeIdx === idx}
+                    >
+                      <span className="faq-question-text">{item.question}</span>
+                      <span className="faq-icon-wrapper">
+                        {activeIdx === idx ? <Minus size={18} /> : <Plus size={18} />}
+                      </span>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {activeIdx === idx && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="faq-answer-wrapper"
+                        >
+                          <div className="faq-answer-content">
+                            <p>{item.answer}</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div 
+                key="no-results"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="faq-no-results"
+              >
+                <p>No results found for "<span className="gold-text">{searchQuery}</span>"</p>
+                <button 
+                  className="btn-text gold-text" 
+                  onClick={() => setSearchQuery('')}
+                >
+                  Clear search and show all
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>

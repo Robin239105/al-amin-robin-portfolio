@@ -1,0 +1,457 @@
+[
+  {
+    "id": "TC001",
+    "title": "Navigate from Home to Portfolio via navigation links",
+    "description": "Verifies that a visitor can move from the landing page to the portfolio page and see portfolio content render after a transition.",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the portfolio page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify portfolio projects are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Navigate from Home to Services via navigation links",
+    "description": "Verifies that a visitor can move from the landing page to the services page and see services content render after a transition.",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the services page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a list of services is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Primary content loads on each main route",
+    "description": "Verifies that each key page route loads and renders its primary content area.",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the about page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the portfolio page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the services page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the FAQ page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the contact page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact inquiry form is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Smooth scroll responds to repeated scroll interactions on Home",
+    "description": "Verifies that scrolling interactions move the page content and do not lock the user in place.",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page again"
+      },
+      {
+        "type": "action",
+        "description": "Scroll up the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the landing page content continues to change as the user scrolls"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Reduced motion: navigation still works and content renders",
+    "description": "Verifies that with reduced motion enabled, the user can still navigate and content renders (without relying on heavy animations).",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Enable reduced motion preference in the browser or test environment"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to view the portfolio page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify portfolio projects are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Sitemap route loads and supports navigation to pages",
+    "description": "Verifies that the sitemap page loads and allows navigating to another page using sitemap links.",
+    "category": "Navigation & Smooth Scroll",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /sitemap"
+      },
+      {
+        "type": "action",
+        "description": "Click a sitemap link to navigate to a main page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the destination page primary content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Submit contact inquiry with all fields and completed reCAPTCHA",
+    "description": "Verifies that a visitor can fill the inquiry form, complete reCAPTCHA, submit, and see an on-screen confirmation.",
+    "category": "Contact Inquiry",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill Demo Sender into the name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill demo.sender@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid phone number into the WhatsApp field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid budget option"
+      },
+      {
+        "type": "action",
+        "description": "Fill This is an automated inquiry message for testing into the message field"
+      },
+      {
+        "type": "action",
+        "description": "Complete the reCAPTCHA verification"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Contact form validation: missing email shows an error",
+    "description": "Verifies that submitting the contact form without a required email shows a validation error.",
+    "category": "Contact Inquiry",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill Demo Sender into the name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid phone number into the WhatsApp field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid budget option"
+      },
+      {
+        "type": "action",
+        "description": "Fill This message is submitted without an email into the message field"
+      },
+      {
+        "type": "action",
+        "description": "Complete the reCAPTCHA verification"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an email validation error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Contact form prevents submit when reCAPTCHA is not completed",
+    "description": "Verifies that the form cannot be successfully submitted without completing reCAPTCHA and the user is prompted to complete it.",
+    "category": "Contact Inquiry",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill Demo Sender into the name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill demo.sender@example.com into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid phone number into the WhatsApp field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid budget option"
+      },
+      {
+        "type": "action",
+        "description": "Fill Attempt submission without reCAPTCHA into the message field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a reCAPTCHA requirement or validation prompt is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Contact form retains entered values after client-side validation error",
+    "description": "Verifies that when validation fails, previously entered user input remains in the form to avoid re-typing.",
+    "category": "Contact Inquiry",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill Demo Sender into the name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid phone number into the WhatsApp field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid budget option"
+      },
+      {
+        "type": "action",
+        "description": "Fill Preserve my input after validation error into the message field"
+      },
+      {
+        "type": "action",
+        "description": "Complete the reCAPTCHA verification"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the previously entered message text Preserve my input after validation error is still present in the message field"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "FAQ search filters questions and allows expanding an item",
+    "description": "Verifies that searching filters the FAQ list and an item can be expanded to read its answer.",
+    "category": "FAQ & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /faq"
+      },
+      {
+        "type": "action",
+        "description": "Fill a keyword from a visible FAQ question into the FAQ search field"
+      },
+      {
+        "type": "action",
+        "description": "Click an FAQ item in the filtered results to expand it"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the expanded FAQ answer content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "FAQ expand then collapse toggles the answer visibility",
+    "description": "Verifies that an FAQ item can be expanded and then collapsed.",
+    "category": "FAQ & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /faq"
+      },
+      {
+        "type": "action",
+        "description": "Click an FAQ item to expand it"
+      },
+      {
+        "type": "action",
+        "description": "Click the same FAQ item to collapse it"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the FAQ answer content is not displayed for that item"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "FAQ search with nonexistent keyword shows no-results state",
+    "description": "Verifies that searching for a keyword that matches nothing shows a no-results state.",
+    "category": "FAQ & SEO",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /faq"
+      },
+      {
+        "type": "action",
+        "description": "Fill a clearly nonexistent keyword into the FAQ search field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a no-results empty state is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "FAQ search can be cleared to restore the full list",
+    "description": "Verifies that clearing the search restores the full FAQ list.",
+    "category": "FAQ & SEO",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /faq"
+      },
+      {
+        "type": "action",
+        "description": "Fill a keyword from a visible FAQ question into the FAQ search field"
+      },
+      {
+        "type": "action",
+        "description": "Clear the FAQ search field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify multiple FAQ items are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "FAQ page loads primary content and is interactive without search",
+    "description": "Verifies the FAQ page loads and users can expand an item without using search.",
+    "category": "FAQ & SEO",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /faq"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the FAQ list"
+      },
+      {
+        "type": "action",
+        "description": "Click an FAQ item to expand it"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the expanded FAQ answer content is displayed"
+      }
+    ]
+  }
+]

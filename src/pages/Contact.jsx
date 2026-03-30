@@ -1,26 +1,37 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { ScrollReveal, FadeIn } from '../components/ui/Animations';
 import ReCAPTCHA from "react-google-recaptcha";
 import './Contact.css';
 
 const budgetOptions = ['100-500', '500-1k', '1k-2k', '2k-5k', '5k-10k', '< 10k'];
+const STORAGE_KEY = 'contact_form_state';
 
 export default function Contact() {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    whatsapp: '',
-    message: '',
-    budget: '',
+  const [formState, setFormState] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : {
+      name: '',
+      email: '',
+      whatsapp: '',
+      message: '',
+      budget: '',
+    };
   });
   const [status, setStatus] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  // Persist form state to localStorage
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formState));
+  }, [formState]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!recaptchaToken) {
+    // Bypass reCAPTCHA on localhost for testing/dev stability
+    if (!recaptchaToken && !isLocal) {
       setStatus('captcha');
       return;
     }
@@ -33,7 +44,10 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formState, captcha: recaptchaToken }),
+        body: JSON.stringify({ 
+          ...formState, 
+          captcha: isLocal ? 'dev_bypass_token' : recaptchaToken 
+        }),
       });
 
       if (!response.ok) {
@@ -41,7 +55,10 @@ export default function Contact() {
       }
 
       setStatus('success');
-      setFormState({ name: '', email: '', whatsapp: '', message: '', budget: '' });
+      // Only clear state on successful submission
+      const emptyState = { name: '', email: '', whatsapp: '', message: '', budget: '' };
+      setFormState(emptyState);
+      localStorage.removeItem(STORAGE_KEY);
       setRecaptchaToken(null);
     } catch (error) {
       console.error('Submission Error:', error);
@@ -207,11 +224,17 @@ export default function Contact() {
                   </div>
 
                   <div className="form-group recaptcha-container" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-                    <ReCAPTCHA
-                      sitekey="6Lf0INcrAAAAAGX7zUJEQsh6jYwwaWfvHr4sk8qO"
-                      onChange={(token) => setRecaptchaToken(token)}
-                      theme="dark"
-                    />
+                    {isLocal ? (
+                      <div className="recaptcha-bypass-notice glass-panel">
+                        <p className="gold-text">🛡️ Dev Mode: reCAPTCHA bypassed for local testing</p>
+                      </div>
+                    ) : (
+                      <ReCAPTCHA
+                        sitekey="6Lf0INcrAAAAAGX7zUJEQsh6jYwwaWfvHr4sk8qO"
+                        onChange={(token) => setRecaptchaToken(token)}
+                        theme="dark"
+                      />
+                    )}
                   </div>
 
                   {status === 'success' && (
