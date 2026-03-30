@@ -31,6 +31,22 @@ const faqData = [
   {
     question: "How can I contact Al Amin Robin for a project?",
     answer: "You can use the contact form on this website, or connect directly via WhatsApp (+8801575096211) or Telegram for a free project consultation."
+  },
+  {
+    question: "What is the starting budget for a project?",
+    answer: "My web development services start from as low as 100 USD. The final cost depend on the complexity of the site, the number of pages, and any specific integrations or products needed for your business."
+  },
+  {
+    question: "Are your websites SEO friendly and responsive?",
+    answer: "Absolutely. Every website I build is 100% responsive (mobile-friendly) and follows the latest SEO best practices to ensure your brand ranks well on Google and other search engines."
+  },
+  {
+    question: "Do you provide support after the website is launched?",
+    answer: "Yes, I provide 3 months of complimentary technical support and maintenance for all premium projects to ensure everything runs smoothly and stays updated."
+  },
+  {
+    question: "How many revisions are included in a project?",
+    answer: "I offer unlimited revisions until you are 100% satisfied with the final result. Your vision and satisfaction are my top priorities."
   }
 ];
 
