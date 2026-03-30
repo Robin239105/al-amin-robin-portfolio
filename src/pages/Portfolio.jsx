@@ -2,6 +2,7 @@ import { ScrollReveal } from '../components/ui/Animations';
 import './Portfolio.css';
 
 const projects = [
+  { title: 'Pro Power', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://darkturquoise-camel-624860.hostingersite.com/' },
   { title: 'Araw Supermarket', imageUrl: '/media/screencapture-arawsupermarket-gr-2025-12-09-16_58_26-scaled-e1765279408154.webp', liveUrl: 'https://arawsupermarket.gr' },
   { title: 'Baxter & Frost', imageUrl: '/media/screencapture-baxterandfrost-2025-09-28-01_16_43-scaled.webp', liveUrl: 'https://baxterandfrost.com/' },
   { title: 'Bellocorp', imageUrl: '/media/screencapture-bellocorp-ca-2023-04-08-20_55_42.webp', liveUrl: 'https://bellocorp.ca/' },
