@@ -18,7 +18,7 @@ const categories = [
 
 const projects = [
   { title: 'Arqaa', category: 'Travel & Hospitality', imageUrl: '/media/arqaa.webp', liveUrl: 'https://ridearqaa.com/' },
-  { title: 'Pro Power', category: 'Service & Maintenance', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://darkturquoise-camel-624860.hostingersite.com/' },
+  { title: 'Pro Power', category: 'Service & Maintenance', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://propowerpcb.com/' },
   { title: 'Ovest KaDeWe', category: 'Restaurant & Food', imageUrl: '/media/screencapture-ovest-kadewe-de-2026-01-22-22_17_58-scaled.webp', liveUrl: 'https://ovest-kadewe.de' },
   { title: 'Soiree By M&C', category: 'Business & Corporate', imageUrl: '/media/FireShot Capture 006 - Soiree By M&C – An Event Company - soireebymc.com.webp', liveUrl: 'https://soireebymc.com/' },
   { title: 'Marler Design', category: 'Creative & Design', imageUrl: '/media/FireShot Capture 005 - Marler Designs - marlerdesigns.com.webp', liveUrl: 'https://marlerdesigns.com/' },
