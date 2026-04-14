@@ -18,10 +18,7 @@ const categories = [
 
 const projects = [
   { title: 'Arqaa', category: 'Travel & Hospitality', imageUrl: '/media/arqaa.webp', liveUrl: 'https://ridearqaa.com/' },
-  { title: 'Pro Power', category: 'Service & Maintenance', imageUrl: '/media/FireShot Capture 001 - Pro Power – Professional Trash Bin Cleaning_ - darkturquoise-camel-624860.hostingersite.com.webp', liveUrl: 'https://propowerpcb.com/' },
   { title: 'Ovest KaDeWe', category: 'Restaurant & Food', imageUrl: '/media/screencapture-ovest-kadewe-de-2026-01-22-22_17_58-scaled.webp', liveUrl: 'https://ovest-kadewe.de' },
-  { title: 'Soiree By M&C', category: 'Business & Corporate', imageUrl: '/media/FireShot Capture 006 - Soiree By M&C – An Event Company - soireebymc.com.webp', liveUrl: 'https://soireebymc.com/' },
-  { title: 'Marler Design', category: 'Creative & Design', imageUrl: '/media/FireShot Capture 005 - Marler Designs - marlerdesigns.com.webp', liveUrl: 'https://marlerdesigns.com/' },
   { title: 'Pellopay', category: 'Finance & Fintech', imageUrl: '/media/FireShot Capture 004 - Pellopay- Best Business Funding In UK - pellopay.io.webp', liveUrl: 'https://pellopay.io/' },
   { title: 'Augusta Das Eis', category: 'Restaurant & Food', imageUrl: '/media/FireShot Capture 003 - Augusta Daseis - augustadaseis.com.webp', liveUrl: 'https://augustadaseis.com/' },
   { title: 'Cali Modern Design and Construction', category: 'Real Estate & Construction', imageUrl: '/media/FireShot Capture 002 - Calimoderndesign - calimoderndesign2487.live-website.com.webp', liveUrl: 'https://calimoderndesign2487.live-website.com' },
@@ -50,7 +47,6 @@ const projects = [
   { title: 'Roam With Rove', category: 'Travel & Hospitality', imageUrl: '/media/screencapture-roamwithrove-2025-09-28-05_17_19-scaled.webp', liveUrl: null },
   { title: 'Rockview Group', category: 'Real Estate & Construction', imageUrl: '/media/screencapture-rockviewgroupe-2026-01-25-22_11_38-scaled.webp', liveUrl: 'https://rockviewgroupe.com/' },
   { title: 'Shedsh', category: 'Restaurant & Food', imageUrl: '/media/screencapture-shedsh-2025-09-20-04_24_36.webp', liveUrl: 'https://shedsh.com' },
-  { title: 'Soirée By MC', category: 'Business & Corporate', imageUrl: '/media/screencapture-soireebymc-2025-10-23-17_52_24-scaled.webp', liveUrl: 'https://soireebymc.com' },
   { title: 'Sri Lanka Lifestyle', category: 'Travel & Hospitality', imageUrl: '/media/screencapture-srilanka-lifestyle-2023-06-28-23_35_03-1.webp', liveUrl: null },
   { title: 'Sterling to USDT', category: 'Finance & Fintech', imageUrl: '/media/screencapture-sterlingtousdt-2025-09-28-01_20_33-scaled.webp', liveUrl: 'https://sterlingtousdt.com/' },
   { title: 'Strella PA', category: 'Medical & Healthcare', imageUrl: '/media/screencapture-strellapa-2025-09-28-00_11_53-scaled.webp', liveUrl: 'https://strellapa.com/' },
