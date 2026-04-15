@@ -18,6 +18,7 @@ const categories = [
 
 const projects = [
   { title: 'Arqaa', category: 'Travel & Hospitality', imageUrl: '/media/arqaa.webp', liveUrl: 'https://ridearqaa.com/' },
+  { title: 'Silverlight Development', category: 'Real Estate & Construction', imageUrl: '/media/silverlight.png', liveUrl: 'https://silverlightdevelopment.com' },
   { title: 'Ovest KaDeWe', category: 'Restaurant & Food', imageUrl: '/media/screencapture-ovest-kadewe-de-2026-01-22-22_17_58-scaled.webp', liveUrl: 'https://ovest-kadewe.de' },
   { title: 'Pellopay', category: 'Finance & Fintech', imageUrl: '/media/FireShot Capture 004 - Pellopay- Best Business Funding In UK - pellopay.io.webp', liveUrl: 'https://pellopay.io/' },
   { title: 'Augusta Das Eis', category: 'Restaurant & Food', imageUrl: '/media/FireShot Capture 003 - Augusta Daseis - augustadaseis.com.webp', liveUrl: 'https://augustadaseis.com/' },
