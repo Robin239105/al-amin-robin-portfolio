@@ -7,7 +7,7 @@ export const blogPosts = [
     category: 'Development',
     date: 'April 28, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/web-dev-2026.png',
+    image: '/media/blog/realistic-web-dev.png',
     content: `
       <p>The landscape of web development has shifted dramatically in early 2026. We are no longer just talking about component-driven design; we are talking about <strong>Quantum-native stacks</strong>. These stacks leverage decentralized processing at the edge to deliver sub-millisecond response times globally.</p>
       <h2>The Shift to Edge-Native Frameworks</h2>
@@ -29,7 +29,7 @@ export const blogPosts = [
     category: 'AI Trends',
     date: 'April 25, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/ai-models-2026.png',
+    image: '/media/blog/realistic-ai-tech.png',
     content: `
       <p>We are witnessing the birth of true foundation models that don't just predict text but understand complex logic chains. GPT-6 and Gemini 3.5 have moved beyond the "hallucination" era, providing 99.9% accuracy for technical tasks. Companies like <a href="https://openai.com" target="_blank">OpenAI</a> and <a href="https://deepmind.google" target="_blank">Google DeepMind</a> are now focusing on reasoning-first architectures.</p>
       <h2>The Rise of Local-First AI</h2>
@@ -51,7 +51,7 @@ export const blogPosts = [
     category: 'SEO Strategy',
     date: 'April 22, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/seo-future-2026.png',
+    image: '/media/blog/realistic-seo-analytics.png',
     content: `
       <p>Google Search Generative Experience (SGE) has fully matured, and traditional "blue link" SEO is officially a relic of the past. If your website isn't the primary source for AI-generated answers, you're invisible. Technical SEO now requires deep integration with AI discovery signals.</p>
       <h2>Entity-Based Optimization (EBO)</h2>
@@ -73,7 +73,7 @@ export const blogPosts = [
     category: 'UI/UX Design',
     date: 'April 20, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/ux-personalization-2026.png',
+    image: '/media/blog/realistic-ux-design.png',
     content: `
       <p>Interfaces that don't change based on who is looking at them are now considered "static" and "dated". In 2026, every premium website is a living organism that adapts to the user's intent. This is the era of <strong>Intent-Driven UX</strong>.</p>
       <h2>Adapting to Every User</h2>
@@ -95,7 +95,7 @@ export const blogPosts = [
     category: 'Development',
     date: 'April 18, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/death-of-css-2026.png',
+    image: '/media/blog/realistic-ux-design.png',
     content: `
       <p>We are moving toward intent-based styling where we describe the "vibe" and the engine handles the execution. Tools like <a href="https://tailwindcss.com" target="_blank">Tailwind</a> have evolved into AI-orchestrated design systems where the developer acts more as an architect than a writer.</p>
       <h2>The Shift to AI-Styling Engines</h2>
@@ -112,7 +112,7 @@ export const blogPosts = [
     category: 'SEO Strategy',
     date: 'April 15, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/voice-search-2026.png',
+    image: '/media/blog/realistic-voice-tech.png',
     content: `
       <p>Long-tail conversational queries are the new battleground for SEO specialists. In 2026, users aren't typing "best developer"; they are asking their AI glasses, "Who is the best full-stack developer for a high-end WordPress project in the UK?"</p>
       <h2>Conversational Search Signals</h2>
