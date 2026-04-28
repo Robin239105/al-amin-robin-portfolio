@@ -10,6 +10,8 @@ const BlogPost = () => {
 
   if (!post) return <NotFound />;
 
+  const readTime = Math.ceil(post.content.split(' ').length / 200);
+
   const relatedPosts = blogPosts
     .filter(p => p.id !== post.id && p.category === post.category)
     .slice(0, 3);
@@ -31,6 +33,7 @@ const BlogPost = () => {
             <div className="blog-post-meta">
               <span className="blog-post-category">{post.category}</span>
               <span className="blog-post-date">{post.date}</span>
+              <span className="blog-post-readtime" style={{ color: 'rgba(255,255,255,0.5)' }}>• {readTime} min read</span>
             </div>
             <h1 className="blog-post-title">{post.title}</h1>
           </div>
