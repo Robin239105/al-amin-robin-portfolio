@@ -2,27 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alaminrobin.com/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://alaminrobin.com/about</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alaminrobin.com/portfolio</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alaminrobin.com/services</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alaminrobin.com/contact</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://alaminrobin.com/blog/quantum-web-stack-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/ai-models-landscape-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/seo-in-the-age-of-generative-search</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/ux-design-hyper-personalization</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/the-death-of-traditional-css</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/voice-search-optimization-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/blockchain-for-content-provenance</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/micro-interactions-emotional-design</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/low-code-vs-custom-dev-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/sustainable-web-design-carbon-footprint</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/multimodal-ai-search-optimization</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/the-rise-of-autonomous-agents</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/react-19-best-practices</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/dark-mode-accessibility-standards</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/zero-click-search-survival-guide</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/neuro-inclusive-design-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/ai-native-ux-patterns</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/rust-in-the-frontend-wasm-revolution</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/predictive-seo-algorithms</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/federated-learning-and-privacy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/haptic-web-experiences</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/headless-cms-landscape-2026</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/brand-authority-schema-dominance</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/ai-generated-code-the-new-standard</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/designing-for-augmented-reality-web</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/ethical-ai-implementation-guide</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/server-components-pitfalls-and-fixes</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/motion-design-performance-balance</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/the-future-of-local-seo</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alaminrobin.com/blog/cross-platform-ai-sync</loc>
+    <lastmod>2026-04-28</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
