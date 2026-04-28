@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollReveal } from '../components/ui/Animations';
+import SEO from '../components/SEO';
 import './Portfolio.css';
 
 const categories = [
@@ -62,15 +63,20 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects = useMemo(() => {
-    if (activeCategory === 'All') return projects;
-    return projects.filter(project => project.category === activeCategory);
-  }, [activeCategory]);
+    if (selectedCategory === 'All') return projects;
+    return projects.filter(project => project.category === selectedCategory);
+  }, [selectedCategory]);
 
   return (
-    <div className="page-container portfolio-page">
+    <div className="portfolio-page page-container">
+      <SEO 
+        title="Restaurant & Hospitality Website Portfolio"
+        description="Explore my premium portfolio of restaurant and hospitality websites. Full stack development expert serving clients in Austin, Charlotte, Nashville, and Phoenix."
+        keywords="Restaurant Website Portfolio, Hospitality Web Design Examples, Austin Restaurant Developer, Charlotte NC Web Design Portfolio"
+      />
       {/* Ambient Orbs */}
       <div className="portfolio-orb portfolio-orb-1"></div>
       <div className="portfolio-orb portfolio-orb-2"></div>

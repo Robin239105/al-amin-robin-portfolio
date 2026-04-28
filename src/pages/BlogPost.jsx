@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogPosts } from '../data/blogPosts';
 import NotFound from './NotFound';
+import SEO from '../components/SEO';
 import './BlogPost.css';
 
 const BlogPost = () => {
@@ -18,6 +19,12 @@ const BlogPost = () => {
 
   return (
     <div className="blog-post-page">
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        keywords={`${post.category}, ${post.title.split(' ').join(', ')}, Al Amin Robin, Restaurant Web Dev`}
+        ogImage={post.image}
+      />
       {/* Header Section */}
       <header className="blog-post-header">
         <img src={post.image} alt={post.title} className="blog-post-hero-image" />

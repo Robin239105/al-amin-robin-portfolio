@@ -6,6 +6,7 @@ import MagneticButton from '../components/ui/MagneticButton';
 import { useState, useEffect } from 'react';
 import { AiLogo, PsLogo, XdLogo, FigmaLogo, ShopifyLogo, DiviLogo } from '../components/ui/SkillIcons';
 import HeroBackground from '../components/ui/HeroBackground';
+import SEO from '../components/SEO';
 import './Home.css';
 
 // ... (technologies, expertise, reviewImages arrays remain unchanged)
@@ -316,6 +317,11 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="Full Stack Developer for Restaurant & Hospitality Websites"
+        description="Premium Full Stack Developer for Restaurant Websites in Austin, Charlotte, Nashville, and Phoenix. 1,300+ projects completed. Expert in custom menu systems and premium hospitality design."
+        keywords="Full Stack Developer Restaurant Website, Austin Web Design, Charlotte Restaurant Website, Nashville Hospitality Tech, Phoenix Web Expert"
+      />
       <section className="hero-section">
         <HeroBackground />
         
@@ -344,8 +350,8 @@ export default function Home() {
               </div>
 
               <div className="hero-titles">
-                <p className="hero-subtitle-chip glow-border">FULL STACK WEBSITE DEVELOPER</p>
-                <p className="hero-subtitle-chip glow-border">FIVERR LEVEL 2 SELLER</p>
+                <p className="hero-subtitle-chip glow-border">FULL STACK RESTAURANT WEBSITE DEVELOPER</p>
+                <p className="hero-subtitle-chip glow-border">EXPERT FOR USA HOSPITALITY BRANDS</p>
               </div>
             </FadeIn>
           </div>

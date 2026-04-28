@@ -1,6 +1,7 @@
 import { ScrollReveal, FadeIn, CountUp } from '../components/ui/Animations';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 import './Services.css';
 
 const teamMembers = [
@@ -58,6 +59,11 @@ const stats = [
 export default function Services() {
   return (
     <div className="page-container team-page">
+      <SEO 
+        title="Professional Web Development Services for Restaurants"
+        description="Premium website development services for USA-based restaurants and hospitality brands. Expert team specializing in custom menu systems, reservation integration, and SEO for Austin, Charlotte, and Nashville."
+        keywords="Restaurant Website Services USA, Hospitality Web Developer, Austin TX Restaurant Design, Charlotte NC Web Expert, Nashville TN Full Stack"
+      />
       {/* Ambient Orbs */}
       <div className="team-orb team-orb-1"></div>
       <div className="team-orb team-orb-2"></div>

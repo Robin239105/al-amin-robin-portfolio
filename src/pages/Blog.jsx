@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
+import SEO from '../components/SEO';
 import './Blog.css';
 
 const Blog = () => {
@@ -16,6 +17,11 @@ const Blog = () => {
 
   return (
     <div className="blog-page">
+      <SEO 
+        title="Web Development & SEO Insights for USA Businesses"
+        description="Deep dives into AI, Web Development, and SEO strategy for restaurant and hospitality brands. Professional insights for Austin, Charlotte, and Nashville tech markets."
+        keywords="Restaurant Tech Blog, Web Development Insights Austin, SEO Strategy for Restaurants USA, Hospitality Digital Trends"
+      />
       <div className="portfolio-orb portfolio-orb-1"></div>
       <div className="portfolio-orb portfolio-orb-2"></div>
 

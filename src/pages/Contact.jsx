@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Send, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { ScrollReveal, FadeIn } from '../components/ui/Animations';
 import ReCAPTCHA from "react-google-recaptcha";
+import SEO from '../components/SEO';
 import './Contact.css';
 
 const budgetOptions = ['100-500', '500-1k', '1k-2k', '2k-5k', '5k-10k', '< 10k'];
@@ -72,6 +73,11 @@ export default function Contact() {
 
   return (
     <div className="page-container contact-page">
+      <SEO 
+        title="Hire a Full Stack Restaurant Web Developer"
+        description="Ready to launch your restaurant's digital presence? Contact Al Amin Robin for premium web development services in Austin, Charlotte, Nashville, and Phoenix. Free consultation available."
+        keywords="Hire Restaurant Web Developer USA, Custom Food Ordering System Austin, Website Designer Charlotte NC, Nashville TN Web Development Contact"
+      />
       <div className="contact-orb contact-orb-1"></div>
       <div className="contact-orb contact-orb-2"></div>
 

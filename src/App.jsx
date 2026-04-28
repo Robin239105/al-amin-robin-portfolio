@@ -27,6 +27,8 @@ function ScrollToTop() {
   return null;
 }
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function App() {
   useEffect(() => {
     // Initialize premium momentum scrolling
@@ -50,12 +52,14 @@ function App() {
   }, []);
 
   return (
-    <LazyMotion features={domMax} strict>
-      <Router>
-        <ScrollToTop />
-        <AppContent />
-      </Router>
-    </LazyMotion>
+    <HelmetProvider>
+      <LazyMotion features={domMax} strict>
+        <Router>
+          <ScrollToTop />
+          <AppContent />
+        </Router>
+      </LazyMotion>
+    </HelmetProvider>
   );
 }
 

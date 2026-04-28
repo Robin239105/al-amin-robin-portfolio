@@ -1,6 +1,7 @@
 import { ScrollReveal, AnimatedText, FadeIn, CountUp } from '../components/ui/Animations';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Palette, Zap, ShoppingCart, Rocket } from 'lucide-react';
+import SEO from '../components/SEO';
 import './About.css';
 
 const education = [
@@ -82,6 +83,11 @@ const services = [
 export default function About() {
   return (
     <div className="page-container about-page">
+      <SEO 
+        title="About Al Amin Robin — Full Stack Restaurant Developer"
+        description="Learn more about Al Amin Robin, a premium Full Stack Developer specialized in restaurant website architecture for USA hospitality brands. Serving Austin, Charlotte, and Nashville."
+        keywords="Al Amin Robin Bio, Restaurant Web Development Expert, USA Hospitality Developer Austin, Charlotte NC Web Design Expert"
+      />
       {/* Ambient Background */}
       <div className="about-orb about-orb-1"></div>
       <div className="about-orb about-orb-2"></div>
