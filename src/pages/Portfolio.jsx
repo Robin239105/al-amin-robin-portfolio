@@ -103,11 +103,11 @@ export default function Portfolio() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`filter-tab ${activeCategory === cat ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat)}
+                className={`filter-tab ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat)}
               >
                 {cat.toUpperCase()}
-                {activeCategory === cat && (
+                {selectedCategory === cat && (
                   <motion.div 
                     layoutId="active-pill"
                     className="active-indicator"
