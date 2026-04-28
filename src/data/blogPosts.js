@@ -7,7 +7,7 @@ export const blogPosts = [
     category: 'Development',
     date: 'April 28, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/realistic-web-dev.png',
+    image: '/media/blog/blog-8-micro.png',
     content: `
       <p>The landscape of web development has shifted dramatically in early 2026. We are no longer just talking about component-driven design; we are talking about <strong>Quantum-native stacks</strong>. These stacks leverage decentralized processing at the edge to deliver sub-millisecond response times globally.</p>
       <h2>The Shift to Edge-Native Frameworks</h2>
@@ -29,7 +29,7 @@ export const blogPosts = [
     category: 'AI Trends',
     date: 'April 25, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/realistic-ai-tech.png',
+    image: '/media/blog/blog-7-blockchain.png',
     content: `
       <p>We are witnessing the birth of true foundation models that don't just predict text but understand complex logic chains. GPT-6 and Gemini 3.5 have moved beyond the "hallucination" era, providing 99.9% accuracy for technical tasks. Companies like <a href="https://openai.com" target="_blank">OpenAI</a> and <a href="https://deepmind.google" target="_blank">Google DeepMind</a> are now focusing on reasoning-first architectures.</p>
       <h2>The Rise of Local-First AI</h2>
@@ -51,7 +51,7 @@ export const blogPosts = [
     category: 'SEO Strategy',
     date: 'April 22, 2026',
     author: 'Al Amin Robin',
-    image: '/media/blog/realistic-seo-analytics.png',
+    image: '/media/blog/blog-11-multimodal.png',
     content: `
       <p>Google Search Generative Experience (SGE) has fully matured, and traditional "blue link" SEO is officially a relic of the past. If your website isn't the primary source for AI-generated answers, you're invisible. Technical SEO now requires deep integration with AI discovery signals.</p>
       <h2>Entity-Based Optimization (EBO)</h2>
