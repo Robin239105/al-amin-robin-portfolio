@@ -6,9 +6,10 @@ import './Navigation.css';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Website Showcase', path: '/portfolio' },
+  { name: 'Showcase', path: '/portfolio' },
+  { name: 'Blog', path: '/blog' },
   { name: 'My Team', path: '/services' },
-  { name: 'Contact With Me', path: '/contact' },
+  { name: 'Contact', path: '/contact' },
 ];
 
 // Bottom tab bar items with icons
@@ -32,12 +33,12 @@ const tabItems = [
       <line x1="9" x2="9" y1="21" y2="9"></line>
     </svg>
   )},
-  { name: 'Team', path: '/services', icon: (active) => (
+  { name: 'Blog', path: '/blog', icon: (active) => (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={active ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-2.5z"></path>
+      <path d="M8 7h6"></path>
+      <path d="M8 11h8"></path>
+      <path d="M8 15h6"></path>
     </svg>
   )},
   { name: 'Contact', path: '/contact', icon: (active) => (

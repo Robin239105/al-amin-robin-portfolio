@@ -14,6 +14,8 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Sitemap from './pages/Sitemap';
 import FAQ from './pages/FAQ';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
 
 // Scrolls to top on every route change
@@ -73,6 +75,8 @@ function AppContent() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
 
             {/* Catch-all for deleted admin routes */}
             <Route path="/admin/*" element={<Home />} />
