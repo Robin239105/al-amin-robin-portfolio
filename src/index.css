@@ -9,6 +9,12 @@
   --text-secondary: #d1d5db;
   --text-tertiary: #9ca3af;
 
+  /* Dev Accents */
+  --code-cyan: #7dd3fc;
+  --code-magenta: #f472b6;
+  --code-green: #4ade80;
+  --code-orange: #fb923c;
+  
   --accent-primary: #fac42f; /* Deep Yellow */
   --accent-secondary: #facc15;
   --accent-glow: rgba(250, 196, 47, 0.15);
@@ -19,6 +25,7 @@
   /* Typography */
   --font-primary: 'Poppins', sans-serif;
   --font-display: 'Poppins', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing & Layout */
   --max-width: 1280px;
@@ -147,6 +154,73 @@ button {
   transition: opacity var(--transition-normal);
 }
 
+/* Developer Theme Utilities */
+.tech-font {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.code-tag {
+  font-family: var(--font-mono);
+  color: var(--code-cyan);
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+.code-comment {
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.tech-border {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-border::before, .tech-border::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--accent-primary);
+  border-style: solid;
+  opacity: 0.5;
+}
+
+.tech-border-top-left::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.tech-border-bottom-right::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+.grid-background {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.code-window-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
 /* Button Utilities */
 .btn-primary {
   display: inline-flex;
@@ -225,6 +299,35 @@ html.lenis, html.lenis body {
 }
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Global Decorations */
+.line-numbers-sidebar {
+  position: fixed;
+  left: 1rem;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-primary);
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
 /* Floating WhatsApp Button */

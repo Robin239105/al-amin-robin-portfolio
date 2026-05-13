@@ -330,28 +330,38 @@ export default function Home() {
         <div className="container hero-container">
           <div className="hero-col hero-left">
             <FadeIn delay={0.2}>
-              <p className="hero-greeting">Hey, my name is</p>
-              <h1 className="hero-title-main">
-                <CharReveal text="AL AMIN" className="text-stroke" delay={0.5} />
-                <br />
-                <CharReveal text="ROBIN" className="text-gradient" delay={1.2} />
-              </h1>
-              
-              <div className="hero-underline-wrapper">
-                <svg className="hero-underline" viewBox="0 0 240 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 16.5C14.5 13 28.5 8.5 40 16.5C51.5 24.5 54.5 22.5 60 16.5C65.5 10.5 76 8.5 84 12C92 15.5 100 12 110 12C120 12 135 16.5 145 16.5C155 16.5 174 8.5 186 9C198 9.5 220 12 236 12" stroke="url(#paint0_linear_hero)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-                  <defs>
-                    <linearGradient id="paint0_linear_hero" x1="4" y1="14" x2="236" y2="14" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="var(--accent-primary)"/>
-                      <stop offset="1" stopColor="#FFDE82"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+              <div className="code-window glass-panel tech-border tech-border-top-left" style={{ padding: '2rem', maxWidth: '650px', position: 'relative' }}>
+                <div className="code-window-dots">
+                  <div className="dot dot-red"></div>
+                  <div className="dot dot-yellow"></div>
+                  <div className="dot dot-green"></div>
+                </div>
+                
+                <p className="code-comment tech-font">// INITIALIZING_DEVELOPER_PORTFOLIO.exe</p>
+                <p className="hero-greeting tech-font" style={{ color: 'var(--code-cyan)', marginBottom: '1rem' }}>const name = "AL AMIN ROBIN";</p>
+                
+                <h1 className="hero-title-main">
+                  <CharReveal text="AL AMIN" className="text-stroke" delay={0.5} />
+                  <br />
+                  <CharReveal text="ROBIN" className="text-gradient" delay={1.2} />
+                </h1>
+                
+                <div className="hero-underline-wrapper">
+                  <svg className="hero-underline" viewBox="0 0 240 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 16.5C14.5 13 28.5 8.5 40 16.5C51.5 24.5 54.5 22.5 60 16.5C65.5 10.5 76 8.5 84 12C92 15.5 100 12 110 12C120 12 135 16.5 145 16.5C155 16.5 174 8.5 186 9C198 9.5 220 12 236 12" stroke="url(#paint0_linear_hero)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_hero" x1="4" y1="14" x2="236" y2="14" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="var(--accent-primary)"/>
+                        <stop offset="1" stopColor="#FFDE82"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
 
-              <div className="hero-titles">
-                <p className="hero-subtitle-chip glow-border">FULL STACK RESTAURANT WEBSITE DEVELOPER</p>
-                <p className="hero-subtitle-chip glow-border">EXPERT FOR USA HOSPITALITY BRANDS</p>
+                <div className="hero-titles" style={{ marginTop: '2rem' }}>
+                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-green)' }}>&lt;FullStack role="Restaurant Specialist" /&gt;</p>
+                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-magenta)' }}>&lt;Experience location="USA Markets" /&gt;</p>
+                </div>
               </div>
             </FadeIn>
           </div>
