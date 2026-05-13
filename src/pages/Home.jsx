@@ -330,15 +330,10 @@ export default function Home() {
         <div className="container hero-container">
           <div className="hero-col hero-left">
             <FadeIn delay={0.2}>
-              <div className="code-window glass-panel tech-border tech-border-top-left" style={{ padding: '2rem', maxWidth: '650px', position: 'relative' }}>
-                <div className="code-window-dots">
-                  <div className="dot dot-red"></div>
-                  <div className="dot dot-yellow"></div>
-                  <div className="dot dot-green"></div>
-                </div>
-                
-                <p className="code-comment tech-font">// INITIALIZING_DEVELOPER_PORTFOLIO.exe</p>
-                <p className="hero-greeting tech-font" style={{ color: 'var(--code-cyan)', marginBottom: '1rem' }}>const name = "AL AMIN ROBIN";</p>
+              <div className="hero-content-wrapper" style={{ position: 'relative' }}>
+                <div className="section-tag tech-font">DEV_PROFILE // 2026</div>
+                <p className="hero-greeting tech-font" style={{ color: 'var(--code-cyan)', marginBottom: '0.5rem', fontSize: '0.9rem' }}>&gt; Initializing greeting...</p>
+                <p className="hero-greeting" style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>Hey, my name is</p>
                 
                 <h1 className="hero-title-main">
                   <CharReveal text="AL AMIN" className="text-stroke" delay={0.5} />
@@ -358,9 +353,9 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <div className="hero-titles" style={{ marginTop: '2rem' }}>
-                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-green)' }}>&lt;FullStack role="Lead Developer" /&gt;</p>
-                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-magenta)' }}>&lt;Experience level="Senior" /&gt;</p>
+                <div className="hero-titles" style={{ marginTop: '2.5rem', display: 'flex', gap: '1rem' }}>
+                  <p className="hero-subtitle-chip tech-font tech-border tech-border-top-left" style={{ color: 'var(--text-primary)', padding: '0.5rem 1.25rem', fontSize: '0.8rem', background: 'rgba(255,255,255,0.03)' }}>FULL STACK DEVELOPER</p>
+                  <p className="hero-subtitle-chip tech-font tech-border tech-border-bottom-right" style={{ color: 'var(--text-primary)', padding: '0.5rem 1.25rem', fontSize: '0.8rem', background: 'rgba(255,255,255,0.03)' }}>PREMIUM UX ENGINEER</p>
                 </div>
               </div>
             </FadeIn>

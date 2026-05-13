@@ -70,10 +70,7 @@ function AppContent() {
   return (
     <>
       <div className="noise-overlay"></div>
-      <div className="grid-background" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}></div>
-      <div className="line-numbers-sidebar">
-        {[...Array(20)].map((_, i) => <span key={i}>{String((i + 1) * 10).padStart(3, '0')}</span>)}
-      </div>
+      <div className="grid-background" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0, opacity: 0.3 }}></div>
       <CodeDecorations />
       <Navigation />
       <main className="main-content">
