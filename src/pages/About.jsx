@@ -84,9 +84,9 @@ export default function About() {
   return (
     <div className="page-container about-page">
       <SEO 
-        title="About Al Amin Robin — Full Stack Restaurant Developer"
-        description="Learn more about Al Amin Robin, a premium Full Stack Developer specialized in restaurant website architecture for USA hospitality brands. Serving Austin, Charlotte, and Nashville."
-        keywords="Al Amin Robin Bio, Restaurant Web Development Expert, USA Hospitality Developer Austin, Charlotte NC Web Design Expert"
+        title="About Al Amin Robin — Full Stack Developer"
+        description="Learn more about Al Amin Robin, a premium Full Stack Developer specialized in custom React and WordPress solutions for global brands."
+        keywords="Al Amin Robin, Full Stack Developer, React Expert, WordPress Maestro, Web Design Portfolio"
       />
       {/* Ambient Background */}
       <div className="about-orb about-orb-1"></div>

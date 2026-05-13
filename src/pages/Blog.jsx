@@ -18,9 +18,9 @@ const Blog = () => {
   return (
     <div className="blog-page">
       <SEO 
-        title="Web Development & SEO Insights for USA Businesses"
-        description="Deep dives into AI, Web Development, and SEO strategy for restaurant and hospitality brands. Professional insights for Austin, Charlotte, and Nashville tech markets."
-        keywords="Restaurant Tech Blog, Web Development Insights Austin, SEO Strategy for Restaurants USA, Hospitality Digital Trends"
+        title="Web Development & Tech Blog — Al Amin Robin"
+        description="Insights on modern web development, React architecture, WordPress performance, and digital strategy from a premium full stack engineer."
+        keywords="Web Development Blog, React Tutorials, WordPress Tips, Tech Strategy, Al Amin Robin Blog"
       />
       <div className="portfolio-orb portfolio-orb-1"></div>
       <div className="portfolio-orb portfolio-orb-2"></div>

@@ -74,9 +74,9 @@ export default function Contact() {
   return (
     <div className="page-container contact-page">
       <SEO 
-        title="Hire a Full Stack Restaurant Web Developer"
-        description="Ready to launch your restaurant's digital presence? Contact Al Amin Robin for premium web development services in Austin, Charlotte, Nashville, and Phoenix. Free consultation available."
-        keywords="Hire Restaurant Web Developer USA, Custom Food Ordering System Austin, Website Designer Charlotte NC, Nashville TN Web Development Contact"
+        title="Contact Al Amin Robin — Hire a Full Stack Developer"
+        description="Ready to start your next project? Get in touch for premium React and WordPress development services. Let's build something extraordinary together."
+        keywords="Contact Web Developer, Hire React Developer, Freelance WordPress Expert, Custom Web Project"
       />
       <div className="contact-orb contact-orb-1"></div>
       <div className="contact-orb contact-orb-2"></div>

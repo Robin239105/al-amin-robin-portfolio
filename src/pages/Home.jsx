@@ -318,9 +318,9 @@ export default function Home() {
   return (
     <div className="home-page">
       <SEO 
-        title="Full Stack Developer for Restaurant & Hospitality Websites"
-        description="Premium Full Stack Developer for Restaurant Websites in Austin, Charlotte, Nashville, and Phoenix. 1,300+ projects completed. Expert in custom menu systems and premium hospitality design."
-        keywords="Full Stack Developer Restaurant Website, Austin Web Design, Charlotte Restaurant Website, Nashville Hospitality Tech, Phoenix Web Expert"
+        title="Full Stack Website Developer"
+        description="Premium Full Stack Developer specializing in custom React and WordPress solutions. 1,300+ projects completed for global clients."
+        keywords="Full Stack Developer, React Expert, WordPress Developer, Custom Web Design"
       />
       <section className="hero-section">
         <HeroBackground />
@@ -359,8 +359,8 @@ export default function Home() {
                 </div>
 
                 <div className="hero-titles" style={{ marginTop: '2rem' }}>
-                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-green)' }}>&lt;FullStack role="Restaurant Specialist" /&gt;</p>
-                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-magenta)' }}>&lt;Experience location="USA Markets" /&gt;</p>
+                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-green)' }}>&lt;FullStack role="Lead Developer" /&gt;</p>
+                  <p className="hero-subtitle-chip tech-font" style={{ color: 'var(--code-magenta)' }}>&lt;Experience level="Senior" /&gt;</p>
                 </div>
               </div>
             </FadeIn>

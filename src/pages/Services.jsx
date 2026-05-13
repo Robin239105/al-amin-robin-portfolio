@@ -60,9 +60,9 @@ export default function Services() {
   return (
     <div className="page-container team-page">
       <SEO 
-        title="Professional Web Development Services for Restaurants"
-        description="Premium website development services for USA-based restaurants and hospitality brands. Expert team specializing in custom menu systems, reservation integration, and SEO for Austin, Charlotte, and Nashville."
-        keywords="Restaurant Website Services USA, Hospitality Web Developer, Austin TX Restaurant Design, Charlotte NC Web Expert, Nashville TN Full Stack"
+        title="Full Stack Web Development Services"
+        description="Premium website development services including React, WordPress, and Custom Backend solutions. Expert team delivering pixel-perfect digital experiences."
+        keywords="Web Development Services, React Development, Custom WordPress, Professional Web Agency"
       />
       {/* Ambient Orbs */}
       <div className="team-orb team-orb-1"></div>

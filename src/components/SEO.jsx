@@ -2,8 +2,8 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, canonical, ogImage }) => {
   const siteName = "Al Amin Robin";
-  const defaultDescription = "Premium Full Stack Website Developer specializing in Restaurant & Hospitality sites for USA-based businesses. Expert in Austin, Charlotte, Nashville, and Phoenix.";
-  const defaultKeywords = "Full Stack Developer Restaurant Website, Custom Restaurant Web Design USA, Austin Web Developer, Charlotte NC Web Design, Nashville Website Expert, Phoenix AZ Full Stack, Premium WordPress Restaurant Theme, React Developer for Hospitality";
+  const defaultDescription = "Premium Full Stack Website Developer specializing in custom React and WordPress solutions. Expert in building high-performance, SEO-optimized digital experiences for global clients.";
+  const defaultKeywords = "Full Stack Developer, React Developer, WordPress Expert, Custom Web Development, SEO Optimization, Premium Web Design, JavaScript Engineer, MERN Stack Expert";
 
   return (
     <Helmet>

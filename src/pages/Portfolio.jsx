@@ -73,9 +73,9 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page page-container">
       <SEO 
-        title="Restaurant & Hospitality Website Portfolio"
-        description="Explore my premium portfolio of restaurant and hospitality websites. Full stack development expert serving clients in Austin, Charlotte, Nashville, and Phoenix."
-        keywords="Restaurant Website Portfolio, Hospitality Web Design Examples, Austin Restaurant Developer, Charlotte NC Web Design Portfolio"
+        title="Web Development Portfolio — Full Stack Showcase"
+        description="Explore my premium collection of custom-built websites. Expert in React, WordPress, and high-conversion eCommerce solutions."
+        keywords="Web Portfolio, Full Stack Projects, React Showcase, Custom WordPress Designs"
       />
       {/* Ambient Orbs */}
       <div className="portfolio-orb portfolio-orb-1"></div>
