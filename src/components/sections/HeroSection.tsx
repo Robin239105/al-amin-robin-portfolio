@@ -5,13 +5,13 @@ import Hero3DAvatar from '../3d/Hero3DAvatar'
 
 export default function HeroSection() {
   return (
-    <section className="min-h-0 lg:min-h-screen relative overflow-hidden bg-3d-gradient flex items-center pt-24 pb-8 lg:pt-28 lg:pb-16">
+    <section className="min-h-0 lg:min-h-screen relative overflow-hidden bg-3d-gradient flex items-center pt-24 pb-0 lg:pt-28 lg:pb-16">
       {/* Background Gradient Orbs */}
       <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[140px] pointer-events-none ambient-glow" />
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-secondary/2 rounded-full blur-[120px] pointer-events-none ambient-glow" style={{ animationDelay: '2s' }} />
 
       {/* Centering wrapper that stretches to the entire available viewport height minus padding */}
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex items-center lg:min-h-[calc(100vh-176px)]">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex lg:items-center lg:min-h-[calc(100vh-176px)] pb-0">
         {/* Grid tracks stretch to fill the height, centering text relative to screen midpoint */}
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 lg:min-h-[640px] items-stretch w-full">
           
@@ -131,7 +131,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:hidden relative w-full h-[360px] sm:h-[480px] md:h-[520px] flex items-end justify-center mt-6 z-10 overflow-visible"
+            className="lg:hidden relative w-full h-[280px] sm:h-[400px] md:h-[480px] flex items-end justify-center mt-4 z-10 overflow-visible"
           >
             <Hero3DAvatar />
           </motion.div>

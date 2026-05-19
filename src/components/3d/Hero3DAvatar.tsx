@@ -11,7 +11,7 @@ import {
 
 export default function Hero3DAvatar() {
   return (
-    <div className="relative w-full h-full flex items-end justify-center select-none overflow-visible scale-[0.55] sm:scale-[0.8] lg:scale-100 origin-bottom">
+    <div className="relative w-full h-full flex items-end justify-center select-none overflow-visible scale-[0.82] sm:scale-[0.9] lg:scale-100 origin-bottom">
       
       {/* 1. Concentric Orbit Tracks in Background (Symmetrically centered around his head/neck, z-0) */}
       <div className="absolute rounded-full border border-white/[0.04] w-[360px] h-[360px] pointer-events-none top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0" />
