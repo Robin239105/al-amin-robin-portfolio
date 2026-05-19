@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Premium Full-Stack Developer & Web Architect"
-        description="Al Amin Robin is a premium Full-Stack Developer specializing in high-performance Next.js apps, React user interfaces, custom backends, database design, and intelligent AI automation workflows."
+        title="Al Amin Robin | Full-Stack Developer & Web Architect"
+        description="Al Amin Robin is a Full-Stack Developer and Web Architect specializing in high-performance Next.js apps, React user interfaces, custom backends, database design, and intelligent AI automation workflows."
         keywords="Full-Stack Developer, Web Architect, Next.js Developer, React Developer, Node.js Backend, Custom WordPress Theme, AI Automation, Database Optimization"
         schemaType="Person"
         schemaData={homeSchema}

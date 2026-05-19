@@ -38,7 +38,7 @@ export default function Portfolio() {
   return (
     <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       <SEO 
-        title="Portfolio & Projects Archive | Premium Web Solutions"
+        title="Portfolio & Projects Archive | Al Amin Robin"
         description="Browse Al Amin Robin's work portfolio containing custom themes, SaaS integrations, fullstack applications, and backend systems."
         keywords="Web developer portfolio, custom wordpress theme developer, nextjs developer portfolio, react projects"
         schemaType="CollectionPage"

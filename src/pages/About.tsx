@@ -19,7 +19,7 @@ export default function About() {
   return (
     <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       <SEO 
-        title="About Al Amin Robin | Premium Web Architect & Server Engineer"
+        title="About Al Amin Robin | Web Architect & Server Engineer"
         description="Explore Al Amin Robin's professional trajectory, core technical pillars, enterprise experience, and academic achievements."
         keywords="Al Amin Robin Profile, Web Developer Trajectory, Server Engineer Experience, Head of Technology UK"
         schemaType="ProfilePage"
