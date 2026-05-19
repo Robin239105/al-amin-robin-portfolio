@@ -324,7 +324,7 @@ export default function ChatbotWidget() {
                 aria-label="Send message"
                 className="w-11 h-11 bg-gradient-to-r from-primary to-orange-500 disabled:from-white/5 disabled:to-white/5 text-black disabled:text-gray-500 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 disabled:hover:scale-100 shadow-lg shadow-primary/10 disabled:shadow-none"
               >
-                <Send className="w-4.5 h-4.5" />
+                <Send className="w-5 h-5" />
               </button>
             </form>
           </motion.div>

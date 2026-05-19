@@ -29,8 +29,7 @@ export default function Footer() {
 
           {/* Social circular icons */}
           <div className="flex items-center gap-3">
-            
-            {/* GitHub */}
+                        {/* GitHub */}
             <a 
               href={PERSONAL.github} 
               target="_blank" 
@@ -38,7 +37,7 @@ export default function Footer() {
               aria-label="GitHub"
               className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 group hover:-translate-y-0.5"
             >
-              <FaGithub className="w-4.5 h-4.5" />
+              <FaGithub className="w-5 h-5" />
             </a>
 
             {/* LinkedIn */}
@@ -49,7 +48,7 @@ export default function Footer() {
               aria-label="LinkedIn"
               className="w-9 h-9 rounded-full bg-[#0A66C2]/5 hover:bg-[#0A66C2]/15 border border-[#0A66C2]/10 hover:border-[#0A66C2]/30 flex items-center justify-center text-[#0A66C2] hover:text-white transition-all duration-300 group hover:-translate-y-0.5"
             >
-              <FaLinkedin className="w-4.5 h-4.5" />
+              <FaLinkedin className="w-5 h-5" />
             </a>
 
             {/* WhatsApp */}
@@ -60,7 +59,7 @@ export default function Footer() {
               aria-label="WhatsApp"
               className="w-9 h-9 rounded-full bg-[#25D366]/5 hover:bg-[#25D366]/15 border border-[#25D366]/10 hover:border-[#25D366]/30 flex items-center justify-center text-[#25D366] hover:text-white transition-all duration-300 group hover:-translate-y-0.5"
             >
-              <FaWhatsapp className="w-4.5 h-4.5" />
+              <FaWhatsapp className="w-5 h-5" />
             </a>
 
             {/* Facebook */}
@@ -71,7 +70,7 @@ export default function Footer() {
               aria-label="Facebook"
               className="w-9 h-9 rounded-full bg-[#1877F2]/5 hover:bg-[#1877F2]/15 border border-[#1877F2]/10 hover:border-[#1877F2]/30 flex items-center justify-center text-[#1877F2] hover:text-white transition-all duration-300 group hover:-translate-y-0.5"
             >
-              <FaFacebook className="w-4.5 h-4.5" />
+              <FaFacebook className="w-5 h-5" />
             </a>
 
           </div>
