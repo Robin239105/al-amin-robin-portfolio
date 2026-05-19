@@ -1,0 +1,11 @@
+# Al Amin Robin Portfolio
+
+Al Amin Robin is a premium Full-Stack Developer & Web Architect.
+
+## Core Navigation
+- [Home Page](https://alaminrobin.com/)
+- [About Al Amin Robin](https://alaminrobin.com/about)
+- [Tech Stack & Expertise](https://alaminrobin.com/tech-stack)
+- [Portfolio & Projects](https://alaminrobin.com/portfolio)
+- [GitHub Contributions](https://alaminrobin.com/github)
+- [Contact Al Amin Robin](https://alaminrobin.com/contact)
