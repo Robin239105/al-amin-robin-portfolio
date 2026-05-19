@@ -232,8 +232,8 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       </html>
       `;
 
-      // Use RESEND_FROM_EMAIL env var (defaults to onboarding@resend.dev if not configured)
-      const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+      // Use RESEND_FROM_EMAIL env var (defaults to contact@alaminrobin.com if not configured)
+      const fromEmail = process.env.RESEND_FROM_EMAIL || 'contact@alaminrobin.com';
       
       const emailPayload: Parameters<Resend['emails']['send']>[0] = {
         from: `Al Amin Robin Portfolio <${fromEmail}>`,
