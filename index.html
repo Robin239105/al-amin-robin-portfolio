@@ -5,14 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Fonts Preconnection -->
+    <!-- Fonts Preconnection & Async Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
 
     <!-- Preload Critical Hero Images -->
     <link rel="preload" fetchpriority="high" as="image" href="/mascot.webp" type="image/webp" />
     <link rel="preload" as="image" href="/lightning.webp" type="image/webp" />
+
+    <!-- Preconnect third-party APIs -->
+    <link rel="preconnect" href="https://api.github.com" />
 
     <!-- Primary SEO Meta Tags -->
     <title>Al Amin Robin | Full-Stack Developer & Web Architect</title>

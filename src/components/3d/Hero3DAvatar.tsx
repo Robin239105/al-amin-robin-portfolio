@@ -22,9 +22,9 @@ export default function Hero3DAvatar() {
       <motion.img
         src="/lightning.webp"
         alt="3D Glass Lightning Bolt"
-        width="440"
-        height="550"
-        className="absolute w-[340px] sm:w-[440px] aspect-[1122/1402] object-contain pointer-events-none z-0"
+        width="650"
+        height="812"
+        className="absolute w-[340px] sm:w-[440px] aspect-[650/812] object-contain pointer-events-none z-0"
         style={{
           top: '-5%',
           right: '-10%',
@@ -130,10 +130,10 @@ export default function Hero3DAvatar() {
           <img
             src="/mascot.webp"
             alt="Al Amin Robin Mascot"
-            width="600"
-            height="750"
+            width="650"
+            height="812"
             fetchPriority="high"
-            className="w-[104%] sm:w-[108%] max-w-[580px] md:max-w-[600px] lg:max-w-[630px] aspect-[1122/1402] h-auto object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
+            className="w-[104%] sm:w-[108%] max-w-[580px] md:max-w-[600px] lg:max-w-[630px] aspect-[650/812] h-auto object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
           />
         </motion.div>
       </motion.div>
