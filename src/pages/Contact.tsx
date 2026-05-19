@@ -82,7 +82,7 @@ export default function Contact() {
     }
 
     try {
-      const response = await fetch('/send-email.php', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         body: data,
       })
