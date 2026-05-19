@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import Busboy from 'busboy';
 
 export const config = {
@@ -32,16 +32,14 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     const fields: Record<string, string> = {};
     let fileBuffer: Buffer | null = null;
     let fileName = '';
-    let fileMime = '';
 
     busboy.on('field', (fieldname, val) => {
       fields[fieldname] = val;
     });
 
     busboy.on('file', (fieldname, file, info) => {
-      const { filename, mimeType } = info;
+      const { filename } = info;
       fileName = filename;
-      fileMime = mimeType;
 
       const chunks: Buffer[] = [];
       file.on('data', (chunk) => {
@@ -60,28 +58,16 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ success: false, message: 'Missing required fields (Name, Email, Message).' });
       }
 
-      // Configure SMTP from Environment Variables
-      const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
-      const smtpPort = parseInt(process.env.SMTP_PORT || '587');
-      const smtpUser = process.env.SMTP_USER || 'contact@alaminrobin.com';
-      const smtpPass = process.env.SMTP_PASSWORD;
-
-      if (!smtpPass) {
+      // Configure Resend API Key
+      const resendApiKey = process.env.RESEND_API_KEY;
+      if (!resendApiKey) {
         return res.status(500).json({
           success: false,
-          message: 'SMTP credentials not configured on Vercel. Please set SMTP_PASSWORD in Vercel Environment Variables.'
+          message: 'Resend API Key not configured on Vercel. Please set RESEND_API_KEY in Vercel Environment Variables.'
         });
       }
 
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
+      const resend = new Resend(resendApiKey);
 
       // HTML Template Matching the Dark Mode Accent Glow Theme
       const htmlBody = `
@@ -199,7 +185,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
           <div class="container">
             <div class="header">
               <h1>Project Brief</h1>
-              <p>New request submitted via alaminrobin.com (Vercel Serverless)</p>
+              <p>New request submitted via alaminrobin.com (Resend)</p>
             </div>
             <div class="content">
               <table class="details-table">
@@ -246,26 +232,34 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       </html>
       `;
 
-      const mailOptions: nodemailer.SendMailOptions = {
-        from: `"${name}" <${smtpUser}>`,
+      // Use RESEND_FROM_EMAIL env var (defaults to onboarding@resend.dev if not configured)
+      const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+      
+      const emailPayload: Parameters<Resend['emails']['send']>[0] = {
+        from: `Al Amin Robin Portfolio <${fromEmail}>`,
         to: 'contact@alaminrobin.com',
-        replyTo: email,
-        subject: `🔥 New Vercel Project Brief: ${projectType} from ${name}`,
+        reply_to: email,
+        subject: `🔥 New Project Brief: ${projectType} from ${name}`,
         html: htmlBody,
       };
 
       if (fileBuffer) {
-        mailOptions.attachments = [
+        emailPayload.attachments = [
           {
             filename: fileName,
             content: fileBuffer,
-            contentType: fileMime,
           },
         ];
       }
 
-      await transporter.sendMail(mailOptions);
-      return res.status(200).json({ success: true });
+      const { data, error } = await resend.emails.send(emailPayload);
+
+      if (error) {
+        console.error('Resend Error:', error);
+        return res.status(500).json({ success: false, message: error.message || 'Resend delivery failed.' });
+      }
+
+      return res.status(200).json({ success: true, data });
     });
 
     req.pipe(busboy);
