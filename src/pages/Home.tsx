@@ -37,7 +37,7 @@ export default function Home() {
       />
       <HeroSection />
       <MarqueeCrossover />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="min-h-[2200px] w-full" />}>
         <ServicesSection />
         <FeaturedProjectsSection />
         <GitHubCommitActivitySection />
