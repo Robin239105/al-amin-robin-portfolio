@@ -1,11 +1,13 @@
+import { lazy, Suspense } from 'react'
 import HeroSection from '../components/sections/HeroSection'
 import MarqueeCrossover from '../components/sections/MarqueeCrossover'
-import ServicesSection from '../components/sections/ServicesSection'
-import FeaturedProjectsSection from '../components/sections/FeaturedProjectsSection'
-import GitHubCommitActivitySection from '../components/sections/GitHubCommitActivitySection'
-import TestimonialsSection from '../components/sections/TestimonialsSection'
-import CTABannerSection from '../components/sections/CTABannerSection'
 import SEO from '../components/SEO'
+
+const ServicesSection = lazy(() => import('../components/sections/ServicesSection'))
+const FeaturedProjectsSection = lazy(() => import('../components/sections/FeaturedProjectsSection'))
+const GitHubCommitActivitySection = lazy(() => import('../components/sections/GitHubCommitActivitySection'))
+const TestimonialsSection = lazy(() => import('../components/sections/TestimonialsSection'))
+const CTABannerSection = lazy(() => import('../components/sections/CTABannerSection'))
 
 export default function Home() {
   const homeSchema = {
@@ -35,11 +37,13 @@ export default function Home() {
       />
       <HeroSection />
       <MarqueeCrossover />
-      <ServicesSection />
-      <FeaturedProjectsSection />
-      <GitHubCommitActivitySection />
-      <TestimonialsSection />
-      <CTABannerSection />
+      <Suspense fallback={null}>
+        <ServicesSection />
+        <FeaturedProjectsSection />
+        <GitHubCommitActivitySection />
+        <TestimonialsSection />
+        <CTABannerSection />
+      </Suspense>
     </>
   )
 }

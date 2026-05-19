@@ -16,53 +16,28 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 lg:min-h-[640px] items-stretch w-full">
           
           {/* Left Content (Grid span 7) - Stretched to full height, relative wrapper, and centered vertically */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-7 flex flex-col items-center lg:items-start justify-center text-center lg:text-left h-full relative w-full"
-          >
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start justify-center text-center lg:text-left h-full relative w-full">
 
             {/* Greeting */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mb-4 text-gray-300 font-medium tracking-wide text-base sm:text-lg text-center lg:text-left"
-            >
+            <div className="mb-4 text-gray-300 font-medium tracking-wide text-base sm:text-lg text-center lg:text-left">
               Hey, I am <span className="text-primary font-bold">{PERSONAL.name}</span>
-            </motion.div>
+            </div>
             
             {/* Huge Bold Title - High SEO Impact Full-Stack Software Engineer H1 */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-4xl sm:text-6xl lg:text-7xl xl:text-[80px] font-display font-extrabold text-white tracking-tight leading-[1.02] mb-6 text-center lg:text-left"
-            >
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[80px] font-display font-extrabold text-white tracking-tight leading-[1.02] mb-6 text-center lg:text-left">
               Full-Stack <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-orange-400 to-orange-600 drop-shadow-[0_2px_25px_rgba(250,131,52,0.25)]">
                 Software Engineer
               </span>
-            </motion.h1>
+            </h1>
             
             {/* High-End Enterprise SEO-Optimized Copy Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-gray-400 text-xs sm:text-sm lg:text-base mb-8 max-w-xl text-center lg:text-left leading-relaxed font-normal mx-auto lg:mx-0"
-            >
+            <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-8 max-w-xl text-center lg:text-left leading-relaxed font-normal mx-auto lg:mx-0">
               I engineer production-grade web applications, secure REST/GraphQL APIs, and automated cloud systems. Leveraging Next.js, React, Node.js, and custom databases to translate complex business challenges into seamless, scalable digital solutions.
-            </motion.p>
+            </p>
             
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex items-center justify-center lg:justify-start gap-4 mb-8 w-full"
-            >
+            <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 w-full">
               <Link
                 to="/contact"
                 className="relative overflow-hidden group px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider btn-glow transition-all duration-300 transform hover:scale-105"
@@ -85,15 +60,10 @@ export default function HeroSection() {
                   </svg>
                 </span>
               </a>
-            </motion.div>
+            </div>
 
             {/* Brand Authority Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="w-full max-w-xl mt-4"
-            >
+            <div className="w-full max-w-xl mt-4">
               <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 <div className="text-center lg:text-left flex flex-col justify-center">
                   <span className="text-3xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-primary via-orange-400 to-orange-600 drop-shadow-[0_2px_15px_rgba(250,131,52,0.2)]">
@@ -122,9 +92,9 @@ export default function HeroSection() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-          </motion.div>
+          </div>
 
           {/* Right Content - 3D Mascot area (Grid span 5) - Visible only on Mobile/Tablet */}
           <motion.div
