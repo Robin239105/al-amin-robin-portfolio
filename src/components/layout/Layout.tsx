@@ -1,6 +1,8 @@
+import { lazy, Suspense } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import ChatbotWidget from '../chatbot/ChatbotWidget'
+
+const ChatbotWidget = lazy(() => import('../chatbot/ChatbotWidget'))
 
 interface LayoutProps {
   children: React.ReactNode
@@ -18,7 +20,9 @@ export default function Layout({ children }: LayoutProps) {
       </div>
       
       <Footer />
-      <ChatbotWidget />
+      <Suspense fallback={null}>
+        <ChatbotWidget />
+      </Suspense>
     </div>
   )
 }

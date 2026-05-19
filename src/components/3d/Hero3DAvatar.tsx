@@ -7,7 +7,7 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiJavascript
-} from '@icons-pack/react-simple-icons'
+} from 'react-icons/si'
 
 export default function Hero3DAvatar() {
   return (
@@ -23,8 +23,8 @@ export default function Hero3DAvatar() {
         src="/lightning.webp"
         alt="3D Glass Lightning Bolt"
         width="440"
-        height="440"
-        className="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] object-contain pointer-events-none z-0"
+        height="550"
+        className="absolute w-[340px] sm:w-[440px] aspect-[1122/1402] object-contain pointer-events-none z-0"
         style={{
           top: '-5%',
           right: '-10%',
@@ -131,8 +131,9 @@ export default function Hero3DAvatar() {
             src="/mascot.webp"
             alt="Al Amin Robin Mascot"
             width="600"
-            height="600"
-            className="w-[104%] sm:w-[108%] max-w-[580px] md:max-w-[600px] lg:max-w-[630px] h-auto object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
+            height="750"
+            fetchPriority="high"
+            className="w-[104%] sm:w-[108%] max-w-[580px] md:max-w-[600px] lg:max-w-[630px] aspect-[1122/1402] h-auto object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
           />
         </motion.div>
       </motion.div>
