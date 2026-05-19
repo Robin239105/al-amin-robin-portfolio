@@ -37,7 +37,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       fields[fieldname] = val;
     });
 
-    busboy.on('file', (fieldname, file, info) => {
+    busboy.on('file', (_fieldname, file, info) => {
       const { filename } = info;
       fileName = filename;
 
@@ -238,7 +238,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       const emailPayload: Parameters<Resend['emails']['send']>[0] = {
         from: `Al Amin Robin Portfolio <${fromEmail}>`,
         to: 'contact@alaminrobin.com',
-        reply_to: email,
+        replyTo: email,
         subject: `🔥 New Project Brief: ${projectType} from ${name}`,
         html: htmlBody,
       };
