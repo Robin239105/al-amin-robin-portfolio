@@ -131,7 +131,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:hidden relative w-full h-[280px] sm:h-[400px] md:h-[480px] flex items-end justify-center mt-4 z-10 overflow-visible"
+            className="lg:hidden relative w-full h-[460px] sm:h-[500px] md:h-[540px] flex items-end justify-center mt-4 z-10 overflow-visible"
           >
             <Hero3DAvatar />
           </motion.div>
