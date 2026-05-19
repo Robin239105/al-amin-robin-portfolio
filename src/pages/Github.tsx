@@ -4,6 +4,7 @@ import { FiExternalLink, FiStar, FiGitBranch, FiGlobe } from 'react-icons/fi'
 import { PERSONAL } from '../data/constants'
 import { StaggerContainer, StaggerItem } from '../components/animations/MotionWrappers'
 import SEO from '../components/SEO'
+import Footer from '../components/layout/Footer'
 
 interface Repo {
   name: string
@@ -247,6 +248,7 @@ export default function GithubPage() {
           )}
         </StaggerContainer>
       </section>
+      <Footer />
     </div>
   )
 }

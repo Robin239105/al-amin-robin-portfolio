@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import HeroSection from '../components/sections/HeroSection'
 import MarqueeCrossover from '../components/sections/MarqueeCrossover'
 import SEO from '../components/SEO'
+import Footer from '../components/layout/Footer'
 
 const ServicesSection = lazy(() => import('../components/sections/ServicesSection'))
 const FeaturedProjectsSection = lazy(() => import('../components/sections/FeaturedProjectsSection'))
@@ -43,6 +44,7 @@ export default function Home() {
         <GitHubCommitActivitySection />
         <TestimonialsSection />
         <CTABannerSection />
+        <Footer />
       </Suspense>
     </>
   )

@@ -4,6 +4,7 @@ import { FiExternalLink } from 'react-icons/fi'
 import { PROJECTS } from '../data/constants'
 import { StaggerContainer, StaggerItem } from '../components/animations/MotionWrappers'
 import SEO from '../components/SEO'
+import Footer from '../components/layout/Footer'
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All Categories')
@@ -199,6 +200,7 @@ export default function Portfolio() {
           </StaggerItem>
         </StaggerContainer>
       </section>
+      <Footer />
     </div>
   )
 }

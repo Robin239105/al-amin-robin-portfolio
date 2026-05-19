@@ -37,7 +37,7 @@ export default function MarqueeCrossover() {
   const doubledStats = [...stats, ...stats, ...stats, ...stats]
 
   return (
-    <section className="relative py-16 overflow-hidden bg-[#040406] border-y border-white/5 marquee-container">
+    <section className="relative z-20 py-12 sm:py-16 overflow-hidden bg-[#040406] border-y border-white/5 marquee-container">
       {/* Dynamic Background Ambient Spotlights */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '6s' }} />
       <div className="absolute top-1/2 right-1/3 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-accent/5 blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />

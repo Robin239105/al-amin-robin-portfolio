@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { PERSONAL } from '../../data/constants'
 import Hero3DAvatar from '../3d/Hero3DAvatar'
 
 export default function HeroSection() {
   return (
-    <section className="min-h-0 lg:min-h-screen relative overflow-hidden bg-3d-gradient flex items-center pt-24 pb-0 lg:pt-28 lg:pb-16">
+    <section className="min-h-0 lg:min-h-screen relative overflow-visible lg:overflow-hidden bg-3d-gradient flex items-center pt-24 pb-0 lg:pt-28 lg:pb-16">
       {/* Background Gradient Orbs */}
       <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[140px] pointer-events-none ambient-glow" />
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-secondary/2 rounded-full blur-[120px] pointer-events-none ambient-glow" style={{ animationDelay: '2s' }} />
@@ -97,14 +96,9 @@ export default function HeroSection() {
           </div>
 
           {/* Right Content - 3D Mascot area (Grid span 5) - Visible only on Mobile/Tablet */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:hidden relative w-full h-[460px] sm:h-[500px] md:h-[540px] flex items-end justify-center mt-4 z-10 overflow-visible"
-          >
+          <div className="lg:hidden relative w-full h-[380px] sm:h-[440px] md:h-[480px] flex items-end justify-center -mb-12 sm:-mb-16 z-10 overflow-visible animate-fade-in-scale-up">
             <Hero3DAvatar />
-          </motion.div>
+          </div>
           
           {/* Right Content Spacer (Grid span 5) - Reserves space on Desktop */}
           <div className="lg:col-span-5 h-full pointer-events-none hidden lg:block" />

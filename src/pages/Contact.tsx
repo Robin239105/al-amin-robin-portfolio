@@ -5,6 +5,7 @@ import { PERSONAL } from '../data/constants'
 import { StaggerContainer, StaggerItem } from '../components/animations/MotionWrappers'
 import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '../components/SEO'
+import Footer from '../components/layout/Footer'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -472,6 +473,7 @@ export default function Contact() {
 
         </StaggerContainer>
       </section>
+      <Footer />
     </div>
   )
 }

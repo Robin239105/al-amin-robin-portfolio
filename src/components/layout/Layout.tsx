@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react'
 import Navbar from './Navbar'
-import Footer from './Footer'
 
 const ChatbotWidget = lazy(() => import('../chatbot/ChatbotWidget'))
 
@@ -19,7 +18,6 @@ export default function Layout({ children }: LayoutProps) {
         <main className="relative z-10 w-full">{children}</main>
       </div>
       
-      <Footer />
       <Suspense fallback={null}>
         <ChatbotWidget />
       </Suspense>

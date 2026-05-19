@@ -39,13 +39,10 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <motion.nav 
-      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ${
+    <nav 
+      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 animate-slide-down-fade-in ${
         scrolled ? 'top-4 px-4 sm:px-6 md:px-8' : 'top-0 py-4 sm:py-6'
       }`}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 85, damping: 16 }}
     >
       <div className="max-w-7xl mx-auto px-6 w-full relative">
         {/* Compact & Balanced header height container */}
@@ -261,6 +258,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   )
 }

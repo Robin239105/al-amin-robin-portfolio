@@ -2,6 +2,7 @@ import { EXPERIENCES, EDUCATION, PERSONAL } from '../data/constants'
 import { StaggerContainer, StaggerItem } from '../components/animations/MotionWrappers'
 import TechIcon from '../components/TechIcon'
 import SEO from '../components/SEO'
+import Footer from '../components/layout/Footer'
 
 export default function About() {
   const aboutSchema = {
@@ -304,6 +305,7 @@ export default function About() {
           </StaggerContainer>
         </StaggerContainer>
       </section>
+      <Footer />
     </div>
   )
 }

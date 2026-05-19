@@ -265,3 +265,98 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: translateX(100%) scaleX(1.5); }
   100% { transform: translateX(300%); }
 }
+
+/* Custom CSS Animations for Hero Entrance and Floating Effects (Main-Thread & GPU Optimized) */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in-scale-up {
+  opacity: 0;
+  animation: fadeInScaleUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+@keyframes lightningEntry {
+  0% {
+    transform: translate(150px, -150px) rotate(35deg) scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) rotate(15deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-lightning-entry {
+  opacity: 0;
+  transform-origin: top right;
+  animation: lightningEntry 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+@keyframes badgesEntry {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-badges-entry {
+  opacity: 0;
+  animation: badgesEntry 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+@keyframes mascotEntry {
+  0% {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-mascot-entry {
+  opacity: 0;
+  animation: mascotEntry 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@keyframes floatMascot {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-mascot {
+  animation: floatMascot 6s ease-in-out infinite;
+}
+
+@keyframes slideDownFadeIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down-fade-in {
+  opacity: 0;
+  animation: slideDownFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

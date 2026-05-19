@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import {
   SiReact,
   SiAstro,
@@ -11,7 +10,7 @@ import {
 
 export default function Hero3DAvatar() {
   return (
-    <div className="relative w-full h-full flex items-end justify-center select-none overflow-visible scale-[0.82] sm:scale-[0.9] lg:scale-100 origin-bottom">
+    <div className="relative w-full h-full flex items-end justify-center select-none overflow-visible scale-[0.95] sm:scale-100 origin-bottom">
       
       {/* 1. Concentric Orbit Tracks in Background (Symmetrically centered around his head/neck, z-0) */}
       <div className="absolute rounded-full border border-white/[0.04] w-[360px] h-[360px] pointer-events-none top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0" />
@@ -19,29 +18,21 @@ export default function Hero3DAvatar() {
       <div className="absolute rounded-full border border-white/[0.015] w-[660px] h-[660px] pointer-events-none top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0" />
 
       {/* 2. Giant 3D Glass Lightning Bolt BEHIND Mascot (Tilted down-left, z-0) */}
-      <motion.img
+      <img
         src="/lightning.webp"
         alt="3D Glass Lightning Bolt"
         width="650"
         height="812"
-        className="absolute w-[340px] sm:w-[440px] aspect-[650/812] object-contain pointer-events-none z-0"
+        className="absolute w-[340px] sm:w-[440px] aspect-[650/812] object-contain pointer-events-none z-0 animate-lightning-entry"
         style={{
           top: '-5%',
           right: '-10%',
           filter: 'drop-shadow(0 0 35px rgba(250,131,52,0.45))'
         }}
-        initial={{ x: 300, y: -300, opacity: 0, rotate: 45, scale: 0.8 }}
-        animate={{ x: 0, y: 0, opacity: 1, rotate: 15, scale: 1 }}
-        transition={{ type: "spring", stiffness: 35, damping: 12, duration: 1.6 }}
       />
 
       {/* 3. Orbiting / Floating Real Stack Badges - Perfectly centered around head/neck, rendering BEHIND mascot (z-10) */}
-      <motion.div
-        className="absolute inset-0 z-10 pointer-events-none"
-        initial={{ scale: 0.6, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 35, damping: 12, delay: 0.4, duration: 1.5 }}
-      >
+      <div className="absolute inset-0 z-10 pointer-events-none animate-badges-entry">
         
         {/* TRACK A: INNER ORBIT (Clockwise Spin, 360px, Centered around head) */}
         <div className="absolute w-[360px] h-[360px] top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
@@ -108,21 +99,12 @@ export default function Hero3DAvatar() {
           </div>
         </div>
 
-      </motion.div>
+      </div>
 
       {/* 4. Main Mascot - Positioned in FRONT of the orbits (z-20) and sized perfectly to fit within orbits */}
-      <motion.div
-        className="relative z-20 flex items-end justify-center w-full h-full"
-        initial={{ y: 350, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 45, damping: 14, duration: 1.5 }}
-      >
+      <div className="relative z-20 flex items-end justify-center w-full h-full animate-mascot-entry">
         {/* Continuous Hover Float Container */}
-        <motion.div
-          className="relative z-20 flex items-end justify-center w-full h-full"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        >
+        <div className="relative z-20 flex items-end justify-center w-full h-full animate-float-mascot">
           {/* Glow behind the mascot */}
           <div className="absolute w-80 h-80 bg-primary/20 rounded-full blur-[100px] pointer-events-none top-[30%] z-0" />
           
@@ -133,10 +115,10 @@ export default function Hero3DAvatar() {
             width="650"
             height="812"
             fetchPriority="high"
-            className="w-[104%] sm:w-[108%] max-w-[580px] md:max-w-[600px] lg:max-w-[630px] aspect-[650/812] h-auto object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
+            className="h-full w-auto max-w-[580px] md:max-w-[600px] lg:max-w-[630px] aspect-[650/812] object-contain relative z-20 select-none drop-shadow-[0_20px_50px_rgba(250,131,52,0.22)]"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
     </div>
   )
