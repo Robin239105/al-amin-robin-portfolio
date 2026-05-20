@@ -18,7 +18,8 @@ export default function About() {
   }
 
   return (
-    <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
+    <>
+      <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       <SEO 
         title="About Al Amin Robin | Web Architect & Server Engineer"
         description="Explore Al Amin Robin's professional trajectory, core technical pillars, enterprise experience, and academic achievements."
@@ -305,7 +306,8 @@ export default function About() {
           </StaggerContainer>
         </StaggerContainer>
       </section>
-      <Footer />
     </div>
+    <Footer />
+  </>
   )
 }

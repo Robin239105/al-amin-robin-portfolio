@@ -122,7 +122,8 @@ export default function GithubPage() {
   }
 
   return (
-    <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
+    <>
+      <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       <SEO 
         title="GitHub Repositories & Open Source | Live Activity"
         description="Monitor Al Amin Robin's open-source projects, active repository commits, coding activity, and development work on GitHub."
@@ -248,7 +249,8 @@ export default function GithubPage() {
           )}
         </StaggerContainer>
       </section>
-      <Footer />
     </div>
+    <Footer />
+  </>
   )
 }

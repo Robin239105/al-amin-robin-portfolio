@@ -110,7 +110,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
+    <>
+      <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       {/* Background ambient radial glows */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/4 rounded-full blur-[180px] pointer-events-none ambient-glow" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/2 rounded-full blur-[140px] pointer-events-none ambient-glow" style={{ animationDelay: '2s' }} />
@@ -473,7 +474,8 @@ export default function Contact() {
 
         </StaggerContainer>
       </section>
-      <Footer />
     </div>
+    <Footer />
+  </>
   )
 }

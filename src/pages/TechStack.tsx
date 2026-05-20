@@ -13,7 +13,8 @@ export default function TechStack() {
   }
 
   return (
-    <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
+    <>
+      <div className="pt-36 pb-24 px-6 relative overflow-hidden bg-transparent">
       <SEO 
         title="Tech Stack & Engineering Skills | Modern Development Toolkit"
         description="Explore Al Amin Robin's developer toolkit. Specialist in React, Next.js, WordPress development, WooCommerce, server management, and AI automations."
@@ -81,7 +82,8 @@ export default function TechStack() {
           </StaggerContainer>
         </StaggerContainer>
       </section>
-      <Footer />
     </div>
+    <Footer />
+  </>
   )
 }
