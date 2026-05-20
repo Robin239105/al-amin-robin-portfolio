@@ -39,104 +39,107 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <nav 
-      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 animate-slide-down-fade-in ${
-        scrolled ? 'top-4 px-4 sm:px-6 md:px-8' : 'top-0 py-4 sm:py-6'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 w-full relative">
-        {/* Compact & Balanced header height container */}
-        <div className={`flex items-center justify-between relative w-full border transition-all duration-500 ${
-          scrolled 
-            ? 'h-14 px-5 rounded-full border-white/10 bg-[#070709]/85 backdrop-blur-xl shadow-lg lg:h-12 lg:px-0 lg:rounded-none lg:border-transparent lg:bg-transparent lg:backdrop-blur-none lg:shadow-none' 
-            : 'h-16 sm:h-20 px-0 rounded-none border-transparent bg-transparent backdrop-blur-none shadow-none'
-        }`}>
-          
-          {/* Left: Redesigned Premium Brand Logo - Hide on desktop sticky */}
-          <div className={`relative z-50 flex items-center transition-all duration-500 ${
-            scrolled ? 'lg:opacity-0 lg:pointer-events-none lg:scale-95' : 'lg:opacity-100 lg:pointer-events-auto lg:scale-100'
+    <>
+      <nav 
+        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 animate-slide-down-fade-in ${
+          scrolled ? 'top-4 px-4 sm:px-6 md:px-8' : 'top-0 py-4 sm:py-6'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 w-full relative">
+          {/* Compact & Balanced header height container */}
+          <div className={`flex items-center justify-between relative w-full border transition-all duration-500 ${
+            scrolled 
+              ? 'h-14 px-5 rounded-full border-white/10 bg-[#070709]/85 backdrop-blur-xl shadow-lg lg:h-12 lg:px-0 lg:rounded-none lg:border-transparent lg:bg-transparent lg:backdrop-blur-none lg:shadow-none' 
+              : 'h-16 sm:h-20 px-0 rounded-none border-transparent bg-transparent backdrop-blur-none shadow-none'
           }`}>
-            <Link to="/" className="flex items-center group cursor-pointer">
-              {/* Balanced Brand Name font size */}
-              <span className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1.5 leading-none transition-all duration-500 group-hover:text-primary">
-                <span>robin</span>
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              </span>
-            </Link>
-          </div>
-
-          {/* Center: Absolute centered floating capsule menu (Desktop only) */}
-          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
-            {/* Perfectly sized capsule with outer padding and fixed height on scrolled state */}
-            <div className={`rounded-full px-3.5 flex items-center justify-center border transition-all duration-500 shadow-lg ${
-              scrolled 
-                ? 'h-11 md:h-12 shadow-[0_15px_30px_rgba(250,131,52,0.08)] bg-[#070709]/85 border-primary/20 backdrop-blur-xl scale-95' 
-                : 'h-12 sm:h-14 bg-[#030304]/60 border-white/10 backdrop-blur-md'
-            }`}>
-              
-              {/* Desktop menu links inside pill - Perfect spacing, gap, and whitespace-nowrap */}
-              <div className="flex items-center gap-2 sm:gap-3 relative">
-                {navLinks.map((link) => {
-                  const isActive = location.pathname === link.href
-                  return (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className={`px-5 sm:px-6 h-8 sm:h-9 flex items-center justify-center rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 relative group text-center select-none whitespace-nowrap ${
-                        isActive ? 'text-white font-extrabold' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      {/* Floating glass active capsule indicator with generous margins */}
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeTab"
-                          className="absolute inset-0 bg-primary/10 border border-primary/40 backdrop-blur-md shadow-[0_0_10px_rgba(250,131,52,0.2)] rounded-full z-0"
-                          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                        />
-                      )}
-                      <span className="relative z-10 leading-none">{link.name}</span>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Resume Button / Mobile Hamburger button */}
-          <div className="relative z-50 flex items-center gap-4">
-            {/* Desktop Resume Button - Hide on desktop sticky */}
-            <div className={`hidden sm:block transition-all duration-500 ${
+            
+            {/* Left: Redesigned Premium Brand Logo - Hide on desktop sticky */}
+            <div className={`relative z-50 flex items-center transition-all duration-500 ${
               scrolled ? 'lg:opacity-0 lg:pointer-events-none lg:scale-95' : 'lg:opacity-100 lg:pointer-events-auto lg:scale-100'
             }`}>
-              <a
-                href={PERSONAL.cvUrl}
-                download
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary border-none px-6 h-11 rounded-full text-black font-extrabold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_15px_rgba(250,131,52,0.25)] hover:shadow-primary/40 hover:scale-105 active:scale-95 group leading-none cursor-pointer"
-              >
-                <svg className="w-3.5 h-3.5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                <span className="leading-none">Resume</span>
-              </a>
+              <Link to="/" className="flex items-center group cursor-pointer">
+                {/* Balanced Brand Name font size */}
+                <span className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight text-white flex items-center gap-1.5 leading-none transition-all duration-500 group-hover:text-primary">
+                  <span>robin</span>
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                </span>
+              </Link>
             </div>
-            {/* Mobile/Tablet Hamburger button (Always in its own gorgeous round glass capsule on the far right!) */}
-            <button
-              className={`lg:hidden w-11 h-11 rounded-full border flex flex-col items-center justify-center relative hover:text-primary transition-all duration-300 cursor-pointer shadow-md ${
-                scrolled 
-                  ? 'bg-[#070709]/85 border-primary/30 backdrop-blur-xl text-white' 
-                  : 'bg-[#030304]/60 border-white/10 backdrop-blur-md text-white'
-              }`}
-              onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open menu"
-            >
-              <svg className="w-5 h-5 text-white transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
 
+            {/* Center: Absolute centered floating capsule menu (Desktop only) */}
+            <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
+              {/* Perfectly sized capsule with outer padding and fixed height on scrolled state */}
+              <div className={`rounded-full px-3.5 flex items-center justify-center border transition-all duration-500 shadow-lg ${
+                scrolled 
+                  ? 'h-11 md:h-12 shadow-[0_15px_30px_rgba(250,131,52,0.08)] bg-[#070709]/85 border-primary/20 backdrop-blur-xl scale-95' 
+                  : 'h-12 sm:h-14 bg-[#030304]/60 border-white/10 backdrop-blur-md'
+              }`}>
+                
+                {/* Desktop menu links inside pill - Perfect spacing, gap, and whitespace-nowrap */}
+                <div className="flex items-center gap-2 sm:gap-3 relative">
+                  {navLinks.map((link) => {
+                    const isActive = location.pathname === link.href
+                    return (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className={`px-5 sm:px-6 h-8 sm:h-9 flex items-center justify-center rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 relative group text-center select-none whitespace-nowrap ${
+                          isActive ? 'text-white font-extrabold' : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        {/* Floating glass active capsule indicator with generous margins */}
+                        {isActive && (
+                          <motion.div
+                            layoutId="activeTab"
+                            className="absolute inset-0 bg-primary/10 border border-primary/40 backdrop-blur-md shadow-[0_0_10px_rgba(250,131,52,0.2)] rounded-full z-0"
+                            transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                          />
+                        )}
+                        <span className="relative z-10 leading-none">{link.name}</span>
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Resume Button / Mobile Hamburger button */}
+            <div className="relative z-50 flex items-center gap-4">
+              {/* Desktop Resume Button - Hide on desktop sticky */}
+              <div className={`hidden sm:block transition-all duration-500 ${
+                scrolled ? 'lg:opacity-0 lg:pointer-events-none lg:scale-95' : 'lg:opacity-100 lg:pointer-events-auto lg:scale-100'
+              }`}>
+                <a
+                  href={PERSONAL.cvUrl}
+                  download
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary border-none px-6 h-11 rounded-full text-black font-extrabold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_15px_rgba(250,131,52,0.25)] hover:shadow-primary/40 hover:scale-105 active:scale-95 group leading-none cursor-pointer"
+                >
+                  <svg className="w-3.5 h-3.5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span className="leading-none">Resume</span>
+                </a>
+              </div>
+
+              {/* Mobile/Tablet Hamburger button (Always in its own gorgeous round glass capsule on the far right!) */}
+              <button
+                className={`lg:hidden w-11 h-11 rounded-full border flex flex-col items-center justify-center relative hover:text-primary transition-all duration-300 cursor-pointer shadow-md ${
+                  scrolled 
+                    ? 'bg-[#070709]/85 border-primary/30 backdrop-blur-xl text-white' 
+                    : 'bg-[#030304]/60 border-white/10 backdrop-blur-md text-white'
+                }`}
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <svg className="w-5 h-5 text-white transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu Fullscreen Overlay */}
       <AnimatePresence>
@@ -146,7 +149,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: "spring", stiffness: 280, damping: 30 }}
-            className="lg:hidden fixed inset-0 z-50 bg-[#030303] flex flex-col justify-between p-6 pt-6 pb-8 overflow-hidden"
+            className="lg:hidden fixed inset-0 z-[100] bg-[#030303] flex flex-col justify-between p-6 pt-6 pb-8 overflow-hidden"
           >
             {/* Elegant Glow background effects inside menu */}
             <div className="absolute top-[-10%] right-[-10%] w-[350px] h-[350px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -255,6 +258,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   )
 }
