@@ -23,6 +23,26 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '44',
+    title: 'Auditoo',
+    description: 'An AI-powered website auditing SaaS platform that performs comprehensive analysis of page speed, SEO, accessibility, and security, providing actionable optimization recommendations.',
+    image: '/projects_screenshots/Auditoo.webp',
+    category: 'SaaS Apps',
+    tech: ['React', 'TypeScript', 'Tailwind CSS'],
+    liveUrl: 'https://auditoo.alaminrobin.com',
+    featured: false,
+  },
+  {
+    id: '43',
+    title: 'RootWord',
+    description: 'An enterprise-grade, high-fidelity visual etymology explorer that lets users trace language evolution, word roots, and historical connections through interactive graphs.',
+    image: '/projects_screenshots/RootWord.webp',
+    category: 'SaaS Apps',
+    tech: ['Astro', 'Tailwind CSS'],
+    liveUrl: 'https://rootword.alaminrobin.com',
+    featured: false,
+  },
+  {
     id: '42',
     title: 'Jamrock Bistro',
     description: 'A premium restaurant and culinary brand platform featuring custom WordPress theme architecture, elegant digital menus, and cohesive brand design.',
