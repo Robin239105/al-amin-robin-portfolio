@@ -29,6 +29,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/Aureva Real Estate.webp',
     category: 'Real Estate & Construction',
     tech: ['React', 'Vite', 'CSS'],
+    liveUrl: 'https://aurevarealestate.vercel.app',
     featured: false,
   },
   {
