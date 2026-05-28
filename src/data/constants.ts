@@ -23,6 +23,15 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '45',
+    title: 'Aureva Real Estate',
+    description: 'A premium modern real estate and property showcase platform featuring elegant interactive listings, rich architectural galleries, and seamless responsive layouts.',
+    image: '/projects_screenshots/Aureva Real Estate.webp',
+    category: 'Real Estate & Construction',
+    tech: ['React', 'Vite', 'CSS'],
+    featured: false,
+  },
+  {
     id: '44',
     title: 'Auditoo',
     description: 'An AI-powered website auditing SaaS platform that performs comprehensive analysis of page speed, SEO, accessibility, and security, providing actionable optimization recommendations.',
