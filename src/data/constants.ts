@@ -139,7 +139,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/silverlight.webp',
     category: 'Real Estate & Construction',
     tech: ['WordPress', 'PHP', 'Divi Builder', 'Custom CSS'],
-    liveUrl: 'https://silverlightdevelopment.com.au',
+    liveUrl: 'https://silverlightdevelopment.com/',
     featured: false,
   },
   {
