@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '48',
+    title: 'Iron & Flow',
+    description: 'A premium modern fitness and athletic training platform featuring customized workout planning, dynamic training routines, and a sleek responsive user interface.',
+    image: '/projects_screenshots/Iron and Flow.webp',
+    category: 'Sports & Fitness',
+    tech: ['React', 'Tailwind CSS', 'Vite'],
+    liveUrl: 'https://iron-and-flow.vercel.app/',
+    featured: false,
+  },
+  {
     id: '47',
     title: 'Form & Flavour',
     description: 'A premium digital studio and creative agency platform showcasing high-end design portfolios, interactive visual experiences, and robust agency services.',
@@ -297,7 +307,7 @@ const RAW_PROJECTS: Project[] = [
     title: 'ICO America',
     description: 'Youth and professional sports association platform managing tournaments, team registrations, and athletic schedules.',
     image: '/projects_screenshots/screencapture-ico-america-2026-01-25-20_29_07-scaled.webp',
-    category: 'Sports',
+    category: 'Sports & Fitness',
     tech: ['WordPress', 'PHP', 'Elementor'],
     liveUrl: 'https://icoamerica.com/',
     featured: false,
