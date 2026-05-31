@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '47',
+    title: 'Form & Flavour',
+    description: 'A premium digital studio and creative agency platform showcasing high-end design portfolios, interactive visual experiences, and robust agency services.',
+    image: '/projects_screenshots/Form and flavour.webp',
+    category: 'Studio & Agency',
+    tech: ['React', 'Tailwind CSS', 'CSS'],
+    liveUrl: 'https://form-and-flavour.vercel.app/',
+    featured: false,
+  },
+  {
     id: '46',
     title: 'Noiréva',
     description: 'Six fragrances composed in shadow and gold. Rare absolutes aged until they speak softly, never loudly.',
