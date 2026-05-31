@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '46',
+    title: 'Noiréva',
+    description: 'Six fragrances composed in shadow and gold. Rare absolutes aged until they speak softly, never loudly.',
+    image: '/projects_screenshots/Noireva perfume.webp',
+    category: 'Perfumes & Fragrances',
+    tech: ['React', 'CSS'],
+    liveUrl: 'https://noireva.vercel.app/',
+    featured: false,
+  },
+  {
     id: '45',
     title: 'Aureva Real Estate',
     description: 'A premium modern real estate and property showcase platform featuring elegant interactive listings, rich architectural galleries, and seamless responsive layouts.',
