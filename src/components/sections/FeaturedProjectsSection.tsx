@@ -196,7 +196,7 @@ export default function FeaturedProjectsSection() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-[9px] tracking-[0.2em] text-[#FF6B35] font-black uppercase">
-                        {project.category.replace('-', ' / ')}
+                        {Array.isArray(project.category) ? project.category.join(' / ') : project.category.replace('-', ' / ')}
                       </span>
                       {/* Active indicator dot */}
                       <span 

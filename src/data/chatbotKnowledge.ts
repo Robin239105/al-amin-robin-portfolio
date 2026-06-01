@@ -166,7 +166,8 @@ export function getChatbotResponse(query: string): ChatResponse {
         : `Here are some of my top featured projects:\n\n`;
 
       showcase.forEach((proj) => {
-        responseText += `* **${proj.title}** (${proj.category}): ${proj.description}\n`;
+        const categoryStr = Array.isArray(proj.category) ? proj.category.join(' & ') : proj.category;
+        responseText += `* **${proj.title}** (${categoryStr}): ${proj.description}\n`;
         if (proj.liveUrl) {
           responseText += `  [Live Link](${proj.liveUrl})\n`;
         }

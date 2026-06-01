@@ -13,7 +13,7 @@ export default function Portfolio() {
   // Dynamically extract and sort unique categories
   const categories = [
     'All Categories',
-    ...Array.from(new Set(PROJECTS.map((p) => p.category))).sort()
+    ...Array.from(new Set(PROJECTS.flatMap((p) => Array.isArray(p.category) ? p.category : [p.category]))).sort()
   ]
 
   // Dynamically extract and sort unique tech tags from all projects
@@ -24,7 +24,7 @@ export default function Portfolio() {
 
   // Concurrently filter by both category and technology selection
   const filtered = PROJECTS.filter((p) => {
-    const matchCategory = activeCategory === 'All Categories' || p.category === activeCategory
+    const matchCategory = activeCategory === 'All Categories' || (Array.isArray(p.category) ? p.category.includes(activeCategory) : p.category === activeCategory)
     const matchTech = activeTech === 'All Technologies' || p.tech.includes(activeTech)
     return matchCategory && matchTech
   })
@@ -170,7 +170,9 @@ export default function Portfolio() {
                       <div className="p-6 relative z-10">
                         <div className="flex items-center gap-2.5 mb-3.5">
                           <span className="text-xs font-mono text-primary bg-primary/5 border border-primary/20 px-2 py-0.5 rounded">{String(project.id).padStart(2, '0')}</span>
-                          <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">{project.category.replace('-', ' / ')}</span>
+                          <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">
+                            {Array.isArray(project.category) ? project.category.join(' / ') : project.category.replace('-', ' / ')}
+                          </span>
                         </div>
                         <h3 className="text-2xl font-extrabold mb-3 group-hover:text-primary transition-colors duration-300 leading-tight uppercase">
                           {project.title}

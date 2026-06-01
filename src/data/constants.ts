@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '49',
+    title: 'Solène Candle',
+    description: 'An elegant e-commerce candle boutique and creative product showcase featuring immersive visuals, structured catalog navigation, and smooth shopping interactions.',
+    image: '/projects_screenshots/Solene Candle.webp',
+    category: ['Creative & Design', 'E-commerce'],
+    tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS', 'TypeScript'],
+    liveUrl: 'https://solene-candle.vercel.app/',
+    featured: false,
+  },
+  {
     id: '48',
     title: 'Iron & Flow',
     description: 'A premium modern fitness and athletic training platform featuring customized workout planning, dynamic training routines, and a sleek responsive user interface.',
