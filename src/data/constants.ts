@@ -199,7 +199,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/pellopay.webp',
     category: 'Finance & Fintech',
     tech: ['WordPress', 'PHP', 'Elementor', 'WooCommerce'],
-    liveUrl: 'https://pellopay.com/',
+    liveUrl: 'https://pellopay.io/',
     featured: false,
   },
   {
@@ -209,7 +209,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/augusta.webp',
     category: 'Restaurant & Food',
     tech: ['WordPress', 'PHP', 'Custom Theme'],
-    liveUrl: 'https://augustadaseis.de/',
+    liveUrl: 'https://augustadaseis.com/',
     featured: false,
   },
   {
@@ -219,7 +219,6 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/cali.webp',
     category: 'Real Estate & Construction',
     tech: ['WordPress', 'PHP', 'WPBakery'],
-    liveUrl: 'https://calimodern.com/',
     featured: false,
   },
   {
@@ -279,7 +278,6 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-empaworld-nl-2025-09-28-00_56_27-scaled.webp',
     category: 'Business & Corporate',
     tech: ['WordPress', 'PHP', 'Elementor'],
-    liveUrl: 'https://empaworld.nl/',
     featured: false,
   },
   {
@@ -319,7 +317,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-ico-america-2026-01-25-20_29_07-scaled.webp',
     category: 'Sports & Fitness',
     tech: ['WordPress', 'PHP', 'Elementor'],
-    liveUrl: 'https://icoamerica.com/',
+    liveUrl: 'https://www.ico-america.com/',
     featured: false,
   },
   {
@@ -339,7 +337,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-lodgesmalbrough-2026-01-26-21_37_17-scaled.webp',
     category: 'Travel & Hospitality',
     tech: ['WordPress', 'PHP', 'Elementor'],
-    liveUrl: 'https://lodgesmalbrough.co.uk/',
+    liveUrl: 'https://lodgesmalbrough.com/',
     featured: false,
   },
   {
@@ -349,7 +347,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-london-property-devrobin-online-2023-06-28-23_38_27-1.webp',
     category: 'Finance & Fintech',
     tech: ['WordPress', 'PHP', 'Custom Theme'],
-    liveUrl: 'https://london-property.devrobin.online/',
+    liveUrl: 'https://london-property-finance.com/',
     featured: false,
   },
   {
@@ -359,7 +357,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-mrsgarlic-2025-09-28-01_04_23-scaled.webp',
     category: 'Restaurant & Food',
     tech: ['WordPress', 'PHP', 'Custom Theme'],
-    liveUrl: 'https://mrsgarlic.de/',
+    liveUrl: 'https://mrsgarlic.com/',
     featured: false,
   },
   {
@@ -409,7 +407,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-propertyfinancechoices-2025-09-28-00_45_30-scaled.webp',
     category: 'Finance & Fintech',
     tech: ['WordPress', 'PHP', 'Elementor'],
-    liveUrl: 'https://propertyfinancechoices.co.uk/',
+    liveUrl: 'https://propertyfinancechoices.com/',
     featured: false,
   },
   {
@@ -429,7 +427,7 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-rockviewgroupe-2026-01-25-22_11_38-scaled.webp',
     category: 'Real Estate & Construction',
     tech: ['WordPress', 'PHP', 'Elementor'],
-    liveUrl: 'https://rockviewgroup.com/',
+    liveUrl: 'https://rockviewgroupe.com/',
     featured: false,
   },
   {
@@ -469,7 +467,6 @@ const RAW_PROJECTS: Project[] = [
     image: '/projects_screenshots/screencapture-theproteinpastry-2025-09-28-00_32_01-scaled.webp',
     category: 'Restaurant & Food',
     tech: ['WordPress', 'PHP', 'WooCommerce'],
-    liveUrl: 'https://theproteinpastry.com/',
     featured: false,
   },
   {
