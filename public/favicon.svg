@@ -1,61 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop class="stop1" offset="0%" stop-color="#FF6B35" />
-      <stop class="stop2" offset="100%" stop-color="#FF9F1C" />
+      <stop offset="0%" stop-color="#FA8334" />
+      <stop offset="100%" stop-color="#FF5E13" />
     </linearGradient>
-    <style>
-      @keyframes gradient-shift {
-        0%, 100% { stop-color: #FF6B35; }
-        50% { stop-color: #FF9F1C; }
-      }
-      @keyframes gradient-shift-2 {
-        0%, 100% { stop-color: #FF9F1C; }
-        50% { stop-color: #FF6B35; }
-      }
-      @keyframes border-pulse {
-        0%, 100% {
-          stroke-width: 2px;
-          stroke-opacity: 0.8;
-        }
-        50% {
-          stroke-width: 3.5px;
-          stroke-opacity: 1;
-        }
-      }
-      @keyframes slide-l {
-        0%, 100% { transform: translateX(0px); }
-        50% { transform: translateX(-3px); }
-      }
-      @keyframes slide-r {
-        0%, 100% { transform: translateX(0px); }
-        50% { transform: translateX(3px); }
-      }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      
-      .stop1 { animation: gradient-shift 4s ease-in-out infinite; }
-      .stop2 { animation: gradient-shift-2 4s ease-in-out infinite; }
-      .glow-border { animation: border-pulse 3s ease-in-out infinite; }
-      .bracket-l { animation: slide-l 3s ease-in-out infinite; }
-      .bracket-r { animation: slide-r 3s ease-in-out infinite; }
-      .cursor { animation: blink 1s step-end infinite; }
-    </style>
   </defs>
-  
-  <!-- Background with slight roundness -->
-  <rect width="100" height="100" rx="20" fill="#09090D" />
-  <rect class="glow-border" width="90" height="90" x="5" y="5" rx="16" fill="#0B0B10" stroke="url(#glow)" stroke-width="2" />
-  
-  <!-- Terminal cursor and 'R' letter -->
-  <g>
-    <text x="44" y="66" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="50" fill="url(#glow)" text-anchor="middle">R</text>
-    <rect class="cursor" x="58" y="32" width="10" height="30" fill="#FF9F1C" rx="1.5" />
-  </g>
-  
-  <!-- Code bracket symbol -->
-  <path class="bracket-l" d="M 22 35 L 12 50 L 22 65" stroke="#FF6B35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  <path class="bracket-r" d="M 78 35 L 88 50 L 78 65" stroke="#FF9F1C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <!-- Sleek dark squircle matching the website's dark theme -->
+  <rect width="100" height="100" rx="28" fill="#07070A" />
+  <!-- Outer subtle gradient ring to give it a premium look -->
+  <rect width="90" height="90" x="5" y="5" rx="24" fill="none" stroke="url(#glow)" stroke-width="1.5" stroke-opacity="0.15" />
+  <!-- Elegant, bold, minimal geometric "R" -->
+  <path d="M 35 26 L 35 74 M 35 26 H 52 C 63 26 69 33 69 41 C 69 49 63 56 52 56 H 35 M 49 56 L 67 74" 
+        stroke="url(#glow)" 
+        stroke-width="12" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none" />
 </svg>
