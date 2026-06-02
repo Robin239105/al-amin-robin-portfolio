@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '50',
+    title: 'Drakonis Legal',
+    description: 'A premium modern law firm and legal services platform featuring elegant presentation layouts, structured legal practice areas, and smooth, responsive animated transitions.',
+    image: '/projects_screenshots/drakonis.webp',
+    category: 'Law & Legal',
+    tech: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://drakonis-legal.vercel.app',
+    featured: false,
+  },
+  {
     id: '49',
     title: 'Solène Candle',
     description: 'An elegant e-commerce candle boutique and creative product showcase featuring immersive visuals, structured catalog navigation, and smooth shopping interactions.',
