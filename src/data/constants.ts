@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '51',
+    title: 'Lunaire Events',
+    description: 'A premium event planning and design showcase platform tailored for wedding coordinators and luxury party celebrations, featuring immersive media galleries, client intake elements, and smooth animations.',
+    image: '/projects_screenshots/Lunaire Events.webp',
+    category: 'Wedding, Design & Parties',
+    tech: ['React', 'Vite', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
+    liveUrl: 'https://lunaire-events-nine.vercel.app',
+    featured: false,
+  },
+  {
     id: '50',
     title: 'Drakonis Legal',
     description: 'A premium modern law firm and legal services platform featuring elegant presentation layouts, structured legal practice areas, and smooth, responsive animated transitions.',
