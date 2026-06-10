@@ -513,7 +513,7 @@ const RAW_PROJECTS: Project[] = [
     id: '39',
     title: 'Vista Forge Design',
     description: 'Boutique creative agency website displaying visual branding, logo designs, and UI assets.',
-    image: '/projects_screenshots/screencapture-vistaforgedesign-au-2025-09-28-05_18_57-scaled.webp',
+    image: '/projects_screenshots/Vistaforgedesign new.webp',
     category: 'Creative & Design',
     tech: ['WordPress', 'PHP', 'Elementor'],
     liveUrl: 'https://vistaforgedesign.com.au/',
