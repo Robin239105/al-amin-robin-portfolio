@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '52',
+    title: 'My Boat Delivery',
+    description: 'A professional boat logistics and delivery services platform managing maritime transport, boat logistics, cargo tracking, and client intake forms with a secure high-performance database layer.',
+    image: '/projects_screenshots/myboatdelivery.webp',
+    category: 'Business & Corporate',
+    tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'MySQL'],
+    liveUrl: 'https://myboatdelivery.com/',
+    featured: false,
+  },
+  {
     id: '51',
     title: 'Lunaire Events',
     description: 'A premium event planning and design showcase platform tailored for wedding coordinators and luxury party celebrations, featuring immersive media galleries, client intake elements, and smooth animations.',
