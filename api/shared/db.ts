@@ -258,6 +258,8 @@ async function initializeDatabase(db: { query: (text: string, params?: any[]) =>
   }
 }
 
+let initPromise: Promise<void> | null = null;
+
 // Check database connection and return query execution client
 export function getDb() {
   const databaseUrl = process.env.DATABASE_URL;
@@ -267,14 +269,20 @@ export function getDb() {
     
     const dbClient = {
       query: async (queryText: string, params: any[] = []) => {
+        if (initPromise) {
+          try {
+            await initPromise;
+          } catch (e) {
+            // Ignore error so that query attempt can still proceed or fail standardly
+          }
+        }
         return (sql as any).query(queryText, params);
       }
     };
 
-    // Trigger async init
-    initializeDatabase(dbClient).catch((err) => {
-      console.error('DB Initialization failed:', err);
-    });
+    if (!initPromise) {
+      initPromise = initializeDatabase(dbClient);
+    }
 
     return {
       isMock: false,
