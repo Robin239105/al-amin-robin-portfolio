@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import Busboy from 'busboy';
+import { getDb } from './shared/db';
 
 export const config = {
   api: {
@@ -56,6 +57,17 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
       if (!name || !email || !message) {
         return res.status(400).json({ success: false, message: 'Missing required fields (Name, Email, Message).' });
+      }
+
+      // Save form submission to database
+      try {
+        const db = getDb();
+        await db.query(
+          `INSERT INTO form_submissions (name, email, project_type, budget, timeline, message) VALUES ($1, $2, $3, $4, $5, $6)`,
+          [name, email, projectType || '', budget || '', timeline || '', message]
+        );
+      } catch (dbError) {
+        console.error('Failed to log submission to database:', dbError);
       }
 
       // Configure Resend API Key
