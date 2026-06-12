@@ -267,7 +267,7 @@ export function getDb() {
     
     const dbClient = {
       query: async (queryText: string, params: any[] = []) => {
-        return (sql as any).query(queryText, params);
+        return (sql as any)(queryText, params);
       }
     };
 
