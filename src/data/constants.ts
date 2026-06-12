@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '54',
+    title: 'ZS Charter',
+    description: 'A premium yacht charter and maritime booking platform featuring localized multilingual support, interactive route layouts, and smooth responsive booking flows.',
+    image: '/projects_screenshots/zs-chaster.webp',
+    category: 'Business & Corporate',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Router', 'i18next'],
+    liveUrl: 'https://zs-charter.com/',
+    featured: false,
+  },
+  {
     id: '53',
     title: 'Nocturne Studio',
     description: 'A premium creative design and interactive digital studio platform featuring immersive 3D graphics, audio-enhanced ambient soundscapes, and advanced visual layouts.',
