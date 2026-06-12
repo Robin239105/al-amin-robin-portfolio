@@ -289,7 +289,7 @@ export function getDb() {
       const cleanText = queryText.replace(/\s+/g, ' ').trim().toLowerCase();
 
       // Mock setting queries
-      if (cleanText.includes('select count(*) from admin_settings') || cleanText.includes('select * from admin_settings')) {
+      if (cleanText.includes('select') && cleanText.includes('admin_settings')) {
         return mockStore.admin_settings;
       }
       if (cleanText.includes('update admin_settings')) {

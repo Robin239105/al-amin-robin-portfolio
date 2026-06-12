@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import Busboy from 'busboy';
-import { getDb } from './shared/db';
+import { getDb } from './shared/db.js';
 
 export const config = {
   api: {

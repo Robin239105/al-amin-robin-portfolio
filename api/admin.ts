@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getDb } from './shared/db';
-import { requireAdmin, signToken } from './shared/auth';
+import { getDb } from './shared/db.js';
+import { requireAdmin, signToken } from './shared/auth.js';
 import bcrypt from 'bcryptjs';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
