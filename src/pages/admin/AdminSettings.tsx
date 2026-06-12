@@ -44,7 +44,7 @@ export default function AdminSettings({ settings, onUpdateSettings }: AdminSetti
     }
 
     try {
-      const response = await fetch('/api/admin/settings', {
+      const response = await fetch('/api/admin?action=settings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

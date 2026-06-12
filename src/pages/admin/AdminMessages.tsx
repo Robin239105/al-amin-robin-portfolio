@@ -31,7 +31,7 @@ export default function AdminMessages({ settings }: { settings: AdminSettingsTyp
 
   const fetchMessages = async () => {
     try {
-      const response = await fetch('/api/admin/messages');
+      const response = await fetch('/api/admin?action=messages');
       if (response.ok) {
         const data = await response.json();
         if (data.success && data.messages) {
@@ -55,7 +55,7 @@ export default function AdminMessages({ settings }: { settings: AdminSettingsTyp
     }
 
     try {
-      const response = await fetch(`/api/admin/messages?id=${id}`, {
+      const response = await fetch(`/api/admin?action=messages&id=${id}`, {
         method: 'DELETE',
       });
       const data = await response.json();

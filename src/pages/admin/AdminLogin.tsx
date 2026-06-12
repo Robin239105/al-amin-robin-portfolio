@@ -14,7 +14,7 @@ export default function AdminLogin() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('/api/admin/verify');
+        const res = await fetch('/api/admin?action=verify');
         if (res.ok) {
           const data = await res.json();
           if (data.success) {
@@ -34,7 +34,7 @@ export default function AdminLogin() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/admin/login', {
+      const response = await fetch('/api/admin?action=login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

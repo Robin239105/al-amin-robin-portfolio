@@ -37,7 +37,7 @@ export default function AdminAnalytics({ settings }: { settings: AdminSettingsTy
   const loadAnalytics = async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
     try {
-      const response = await fetch('/api/admin/analytics');
+      const response = await fetch('/api/admin?action=analytics');
       if (response.ok) {
         const data = await response.json();
         if (data.success && data.stats) {

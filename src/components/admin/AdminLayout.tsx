@@ -37,7 +37,7 @@ export default function AdminLayout() {
 
   const fetchSettings = async () => {
     try {
-      const response = await fetch('/api/admin/settings');
+      const response = await fetch('/api/admin?action=settings');
       if (response.ok) {
         const data = await response.json();
         if (data.success && data.settings) {
@@ -52,7 +52,7 @@ export default function AdminLayout() {
   useEffect(() => {
     const verifySession = async () => {
       try {
-        const response = await fetch('/api/admin/verify');
+        const response = await fetch('/api/admin?action=verify');
         if (!response.ok) {
           // Redirect to login if unauthorized
           navigate('/admin/login');
@@ -76,7 +76,7 @@ export default function AdminLayout() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch('/api/admin/logout', { method: 'POST' });
+      const res = await fetch('/api/admin?action=logout', { method: 'POST' });
       if (res.ok) {
         navigate('/admin/login');
       }

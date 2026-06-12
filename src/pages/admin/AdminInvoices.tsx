@@ -66,8 +66,8 @@ export default function AdminInvoices({ settings }: { settings: AdminSettingsTyp
 
   const fetchData = async () => {
     try {
-      const invoicesRes = await fetch('/api/admin/invoices');
-      const clientsRes = await fetch('/api/admin/clients');
+      const invoicesRes = await fetch('/api/admin?action=invoices');
+      const clientsRes = await fetch('/api/admin?action=clients');
       if (invoicesRes.ok && clientsRes.ok) {
         const invoicesData = await invoicesRes.json();
         const clientsData = await clientsRes.json();
@@ -188,7 +188,7 @@ export default function AdminInvoices({ settings }: { settings: AdminSettingsTyp
     const method = view === 'edit' ? 'PUT' : 'POST';
 
     try {
-      const response = await fetch('/api/admin/invoices', {
+      const response = await fetch('/api/admin?action=invoices', {
         method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -211,7 +211,7 @@ export default function AdminInvoices({ settings }: { settings: AdminSettingsTyp
     }
 
     try {
-      const response = await fetch(`/api/admin/invoices?id=${id}`, {
+      const response = await fetch(`/api/admin?action=invoices&id=${id}`, {
         method: 'DELETE'
       });
       const data = await response.json();

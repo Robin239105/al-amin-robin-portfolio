@@ -59,8 +59,8 @@ export default function AdminClients({ settings }: { settings: AdminSettingsType
 
   const fetchData = async () => {
     try {
-      const clientsRes = await fetch('/api/admin/clients');
-      const paymentsRes = await fetch('/api/admin/payments');
+      const clientsRes = await fetch('/api/admin?action=clients');
+      const paymentsRes = await fetch('/api/admin?action=payments');
       if (clientsRes.ok && paymentsRes.ok) {
         const clientsData = await clientsRes.json();
         const paymentsData = await paymentsRes.json();
@@ -122,7 +122,7 @@ export default function AdminClients({ settings }: { settings: AdminSettingsType
     const method = editingClient ? 'PUT' : 'POST';
 
     try {
-      const response = await fetch('/api/admin/clients', {
+      const response = await fetch('/api/admin?action=clients', {
         method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
@@ -145,7 +145,7 @@ export default function AdminClients({ settings }: { settings: AdminSettingsType
     }
 
     try {
-      const response = await fetch(`/api/admin/clients?id=${id}`, {
+      const response = await fetch(`/api/admin?action=clients&id=${id}`, {
         method: 'DELETE'
       });
       const data = await response.json();
@@ -177,7 +177,7 @@ export default function AdminClients({ settings }: { settings: AdminSettingsType
     }
 
     try {
-      const response = await fetch('/api/admin/payments', {
+      const response = await fetch('/api/admin?action=payments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -206,7 +206,7 @@ export default function AdminClients({ settings }: { settings: AdminSettingsType
     }
 
     try {
-      const response = await fetch(`/api/admin/payments?id=${id}`, {
+      const response = await fetch(`/api/admin?action=payments&id=${id}`, {
         method: 'DELETE'
       });
       const data = await response.json();
