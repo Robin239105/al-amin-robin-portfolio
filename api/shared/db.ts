@@ -162,11 +162,11 @@ mockStore.visitors = generateMockVisitors();
 let tablesInitialized = false;
 
 // Initialize database schema in Neon
-async function initializeDatabase(sql: any) {
+async function initializeDatabase(db: { query: (text: string, params?: any[]) => Promise<any> }) {
   if (tablesInitialized) return;
   try {
     // 1. Admin settings table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS admin_settings (
         id SERIAL PRIMARY KEY,
         password_hash VARCHAR(255) NOT NULL,
@@ -178,17 +178,17 @@ async function initializeDatabase(sql: any) {
     `);
 
     // Seed default admin password if empty
-    const adminCheck = await sql(`SELECT COUNT(*) FROM admin_settings`);
+    const adminCheck = await db.query(`SELECT COUNT(*) FROM admin_settings`);
     if (parseInt(adminCheck[0].count, 10) === 0) {
       const defaultHash = bcrypt.hashSync('admin123', 10);
-      await sql(
+      await db.query(
         `INSERT INTO admin_settings (password_hash, dashboard_name) VALUES ($1, $2)`,
         [defaultHash, 'Admin Dashboard']
       );
     }
 
     // 2. Visitors table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS visitors (
         id SERIAL PRIMARY KEY,
         session_id VARCHAR(100) NOT NULL,
@@ -198,7 +198,7 @@ async function initializeDatabase(sql: any) {
     `);
 
     // 3. Form submissions table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS form_submissions (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -212,7 +212,7 @@ async function initializeDatabase(sql: any) {
     `);
 
     // 4. Clients table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS clients (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -224,7 +224,7 @@ async function initializeDatabase(sql: any) {
     `);
 
     // 5. Payments table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS payments (
         id SERIAL PRIMARY KEY,
         client_id INT REFERENCES clients(id) ON DELETE CASCADE,
@@ -237,7 +237,7 @@ async function initializeDatabase(sql: any) {
     `);
 
     // 6. Invoices table
-    await sql(`
+    await db.query(`
       CREATE TABLE IF NOT EXISTS invoices (
         id SERIAL PRIMARY KEY,
         client_id INT REFERENCES clients(id) ON DELETE CASCADE,
@@ -264,16 +264,21 @@ export function getDb() {
 
   if (databaseUrl) {
     const sql = neon(databaseUrl);
+    
+    const dbClient = {
+      query: async (queryText: string, params: any[] = []) => {
+        return (sql as any).query(queryText, params);
+      }
+    };
+
     // Trigger async init
-    initializeDatabase(sql).catch((err) => {
+    initializeDatabase(dbClient).catch((err) => {
       console.error('DB Initialization failed:', err);
     });
 
     return {
       isMock: false,
-      query: async (queryText: string, params: any[] = []) => {
-        return sql(queryText, params);
-      }
+      ...dbClient
     };
   }
 
