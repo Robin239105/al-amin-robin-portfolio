@@ -23,6 +23,16 @@ export const STATS: Stat[] = [
 
 const RAW_PROJECTS: Project[] = [
   {
+    id: '53',
+    title: 'Nocturne Studio',
+    description: 'A premium creative design and interactive digital studio platform featuring immersive 3D graphics, audio-enhanced ambient soundscapes, and advanced visual layouts.',
+    image: '/projects_screenshots/Nocturne Studios.webp',
+    category: 'Studio & Agency',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'PostCSS', 'Framer Motion', 'Three.js', 'Howler.js', 'React Router', 'Zustand'],
+    liveUrl: 'https://nocturne-studios.vercel.app/',
+    featured: false,
+  },
+  {
     id: '52',
     title: 'My Boat Delivery',
     description: 'A professional boat logistics and delivery services platform managing maritime transport, boat logistics, cargo tracking, and client intake forms with a secure high-performance database layer.',
