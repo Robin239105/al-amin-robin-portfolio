@@ -266,7 +266,17 @@ export function getDb() {
 
   if (databaseUrl) {
     const sql = neon(databaseUrl);
-    
+
+    // Raw query runner used directly by schema init. Must NOT await initPromise,
+    // otherwise initializeDatabase would await itself and deadlock.
+    const rawQuery = (queryText: string, params: any[] = []) =>
+      (sql as any).query(queryText, params);
+
+    if (!initPromise) {
+      initPromise = initializeDatabase({ query: rawQuery });
+    }
+
+    // Public client gates queries behind schema init so the schema exists first.
     const dbClient = {
       query: async (queryText: string, params: any[] = []) => {
         if (initPromise) {
@@ -276,13 +286,9 @@ export function getDb() {
             // Ignore error so that query attempt can still proceed or fail standardly
           }
         }
-        return (sql as any).query(queryText, params);
+        return rawQuery(queryText, params);
       }
     };
-
-    if (!initPromise) {
-      initPromise = initializeDatabase(dbClient);
-    }
 
     return {
       isMock: false,
