@@ -108,7 +108,7 @@ async function handleLogin(req: VercelRequest, res: VercelResponse, db: any) {
 }
 
 // 2. LOGOUT HANDLER
-async function handleLogout(req: VercelRequest, res: VercelResponse) {
+async function handleLogout(_req: VercelRequest, res: VercelResponse) {
   res.setHeader(
     'Set-Cookie',
     'admin_session=; HttpOnly; Path=/; SameSite=Lax; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT'
@@ -159,7 +159,7 @@ async function handleSettings(req: VercelRequest, res: VercelResponse, db: any) 
 }
 
 // 4. ANALYTICS HANDLER
-async function handleAnalytics(req: VercelRequest, res: VercelResponse, db: any) {
+async function handleAnalytics(_req: VercelRequest, res: VercelResponse, db: any) {
   try {
     const visitorsRaw = await db.query(
       `SELECT session_id, visited_at FROM visitors WHERE visited_at >= NOW() - INTERVAL '6 months'`
